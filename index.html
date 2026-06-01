@@ -1480,8 +1480,10 @@ footer {
 
 <!-- FOOTER -->
 <footer>
+  <div class="footer-copy">
   <div class="footer-logo">Izaz Sarbudeen</div>
-  <div class="footer-copy">© 2025 Izaz Sarbudeen. All rights reserved.</div>
+  <div class="footer-copy">
+      © <span id="currentYear"></span> Izaz Sarbudeen. All rights reserved.❤️</div>
   <div class="footer-socials">
     <a href="https://linkedin.com/in/izazsarbudeen" class="footer-social" target="_blank">LinkedIn</a>
     <a href="https://github.com/izazsarbudeen" class="footer-social" target="_blank">GitHub</a>
@@ -1491,7 +1493,11 @@ footer {
     <a href="https://izazsarbudeen.github.io/terms-of-use.html" class="footer-social" target="_blank">Terms</a>
   </div>
 </footer>
-
+  
+<script>
+  document.getElementById("currentYear").textContent = new Date().getFullYear();
+</script>
+  
 <script>
   const observer = new IntersectionObserver((entries) => {
     entries.forEach((entry, i) => {
