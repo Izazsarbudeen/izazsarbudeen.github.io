@@ -812,6 +812,7 @@ footer {
 <footer>
   <div class="footer-logo">Izaz Sarbudeen</div>
   <div class="footer-copy">© 2025 Izaz Sarbudeen. All rights reserved.</div>
+  © <span id="currentYear"></span> Izaz Sarbudeen. All rights reserved.❤️</div>
   <div class="footer-socials">
     <a href="index.html" class="footer-social">Home</a>
     <a href="projects.html" class="footer-social">Projects</a>
@@ -833,7 +834,10 @@ footer {
     });
   }, { threshold: 0.08 });
   document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
-
+  
+ <script>
+  document.getElementById("currentYear").textContent = new Date().getFullYear();
+</script>
   // Mobile menu toggle
   function toggleMenu() {
     const menu = document.getElementById('mobileMenu');
