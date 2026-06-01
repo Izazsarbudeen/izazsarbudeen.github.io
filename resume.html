@@ -1,0 +1,975 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Resume / CV — Izaz Sarbudeen | Electrical Planning Engineer</title>
+  <meta name="description" content="Download the CV of Izaz Sarbudeen — Electrical Planning Engineer and Design Engineer based in Saudi Arabia." />
+  <link rel="canonical" href="https://izazsarbudeen.github.io/resume.html" />
+
+  <!-- Fonts matching the site aesthetic -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+
+  <style>
+    /* ── Reset & Base ── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --bg: #030303;
+      --surface: #0f0f0f;
+      --surface2: #161616;
+      --border: rgba(255,255,255,0.07);
+      --border2: rgba(255,255,255,0.12);
+      --text: #f0f0f0;
+      --muted: #666;
+      --muted2: #888;
+      --accent: #e8e8e8;
+      --tag-bg: rgba(255,255,255,0.05);
+      --tag-text: #999;
+      --green: #22c55e;
+      --font: 'Inter', sans-serif;
+      --mono: 'JetBrains Mono', monospace;
+    }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: var(--font);
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      min-height: 100vh;
+      -webkit-font-smoothing: antialiased;
+    }
+    a { color: inherit; text-decoration: none; }
+
+    /* ── NAV (matches site style) ── */
+    nav.site-nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(3,3,3,0.92);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+      padding: 0 24px;
+    }
+    .nav-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      height: 56px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .nav-logo {
+      font-size: 0.95rem;
+      font-weight: 600;
+      letter-spacing: -0.02em;
+      color: var(--text);
+    }
+    .nav-links {
+      display: flex;
+      gap: 32px;
+      list-style: none;
+    }
+    .nav-links a {
+      font-size: 0.84rem;
+      color: var(--muted);
+      transition: color 0.2s;
+    }
+    .nav-links a:hover, .nav-links a.active { color: var(--text); }
+    .nav-badge {
+      font-size: 0.7rem;
+      padding: 3px 9px;
+      border: 1px solid rgba(34,197,94,0.3);
+      border-radius: 100px;
+      color: var(--green);
+      letter-spacing: 0.03em;
+    }
+    @media (max-width: 768px) {
+      .nav-links { display: none; }
+    }
+
+    /* ── BREADCRUMB ── */
+    .breadcrumb {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px 24px 0;
+      font-size: 0.78rem;
+      color: var(--muted);
+      display: flex;
+      gap: 6px;
+      align-items: center;
+    }
+    .breadcrumb a { color: var(--muted); }
+    .breadcrumb a:hover { color: var(--text); }
+    .breadcrumb span { color: var(--muted2); }
+
+    /* ── HERO ── */
+    .hero {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 60px 24px 48px;
+    }
+    .hero-label {
+      font-family: var(--mono);
+      font-size: 0.72rem;
+      color: var(--muted);
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      margin-bottom: 16px;
+    }
+    .hero h1 {
+      font-size: clamp(2.2rem, 5vw, 3.6rem);
+      font-weight: 300;
+      letter-spacing: -0.04em;
+      line-height: 1.05;
+      color: var(--text);
+      margin-bottom: 20px;
+    }
+    .hero h1 em {
+      font-style: normal;
+      font-weight: 600;
+    }
+    .hero-sub {
+      font-size: 1rem;
+      color: var(--muted2);
+      max-width: 560px;
+      line-height: 1.7;
+      margin-bottom: 32px;
+    }
+    .hero-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 36px;
+    }
+    .hero-tags span {
+      font-size: 0.76rem;
+      padding: 5px 12px;
+      border: 1px solid var(--border2);
+      border-radius: 100px;
+      color: var(--muted2);
+      font-family: var(--mono);
+    }
+    .hero-actions {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+    .btn-primary {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 11px 24px;
+      background: var(--text);
+      color: var(--bg);
+      border-radius: 8px;
+      font-size: 0.88rem;
+      font-weight: 500;
+      transition: opacity 0.2s;
+      cursor: pointer;
+      border: none;
+    }
+    .btn-primary:hover { opacity: 0.85; }
+    .btn-secondary {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 11px 24px;
+      border: 1px solid var(--border2);
+      border-radius: 8px;
+      font-size: 0.88rem;
+      color: var(--muted2);
+      transition: all 0.2s;
+    }
+    .btn-secondary:hover { border-color: var(--text); color: var(--text); }
+
+    /* ── SECTION WRAPPER ── */
+    .section {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 24px 80px;
+    }
+    .section-label {
+      font-family: var(--mono);
+      font-size: 0.7rem;
+      color: var(--muted);
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      margin-bottom: 12px;
+    }
+    .section-title {
+      font-size: clamp(1.6rem, 3.5vw, 2.2rem);
+      font-weight: 300;
+      letter-spacing: -0.03em;
+      color: var(--text);
+      margin-bottom: 40px;
+      line-height: 1.2;
+    }
+    .section-title strong { font-weight: 600; }
+
+    /* ── PDF PREVIEW ── */
+    .preview-wrapper {
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      overflow: hidden;
+      background: var(--surface);
+    }
+    .preview-bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 12px 20px;
+      border-bottom: 1px solid var(--border);
+      background: var(--surface2);
+    }
+    .preview-bar-left {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .preview-dots {
+      display: flex;
+      gap: 6px;
+    }
+    .preview-dots span {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: var(--border2);
+    }
+    .preview-bar-label {
+      font-size: 0.78rem;
+      color: var(--muted);
+      font-family: var(--mono);
+    }
+    .preview-bar-actions {
+      display: flex;
+      gap: 8px;
+    }
+    .preview-bar-actions a {
+      font-size: 0.76rem;
+      color: var(--muted2);
+      padding: 4px 12px;
+      border: 1px solid var(--border2);
+      border-radius: 6px;
+      transition: all 0.2s;
+    }
+    .preview-bar-actions a:hover { color: var(--text); border-color: var(--text); }
+
+    /* PDF embed area */
+    .pdf-embed-area {
+      position: relative;
+      min-height: 700px;
+      background: #1a1a1a;
+    }
+    .pdf-embed-area iframe {
+      width: 100%;
+      height: 780px;
+      border: none;
+      display: block;
+    }
+    /* Placeholder shown before resume PDF is uploaded */
+    .pdf-placeholder {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 500px;
+      color: var(--muted);
+      gap: 16px;
+      text-align: center;
+      padding: 40px;
+    }
+    .pdf-placeholder-icon {
+      width: 56px;
+      height: 56px;
+      border: 1px solid var(--border2);
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5rem;
+    }
+    .pdf-placeholder p {
+      font-size: 0.88rem;
+      color: var(--muted);
+      line-height: 1.6;
+      max-width: 320px;
+    }
+    .pdf-placeholder .upload-hint {
+      font-family: var(--mono);
+      font-size: 0.72rem;
+      color: var(--muted);
+      padding: 8px 16px;
+      border: 1px dashed var(--border2);
+      border-radius: 8px;
+    }
+
+    /* ── RESUME INLINE (shown when no PDF) ── */
+    .resume-grid {
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+      gap: 48px;
+    }
+    @media (max-width: 900px) {
+      .resume-grid { grid-template-columns: 1fr; }
+    }
+
+    .resume-sidebar {}
+    .sidebar-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 24px;
+      margin-bottom: 16px;
+    }
+    .sidebar-card h3 {
+      font-size: 0.7rem;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 16px;
+    }
+    .sidebar-card p, .sidebar-card li {
+      font-size: 0.84rem;
+      color: var(--muted2);
+      line-height: 1.6;
+      margin-bottom: 6px;
+      list-style: none;
+    }
+    .sidebar-card li::before {
+      content: "—";
+      color: var(--muted);
+      margin-right: 8px;
+      font-size: 0.8rem;
+    }
+    .sidebar-info-row {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      margin-bottom: 10px;
+      font-size: 0.84rem;
+    }
+    .sidebar-info-row .icon { color: var(--muted); font-size: 0.9rem; flex-shrink: 0; padding-top: 2px; }
+    .sidebar-info-row .val { color: var(--muted2); }
+    .skill-tags { display: flex; flex-wrap: wrap; gap: 6px; }
+    .skill-tag {
+      font-size: 0.72rem;
+      padding: 4px 10px;
+      border: 1px solid var(--border);
+      border-radius: 100px;
+      color: var(--muted2);
+      font-family: var(--mono);
+    }
+    .cert-list { display: flex; flex-direction: column; gap: 8px; }
+    .cert-item {
+      display: flex;
+      gap: 10px;
+      align-items: flex-start;
+      font-size: 0.82rem;
+      color: var(--muted2);
+    }
+    .cert-item .c-icon { font-size: 1rem; flex-shrink: 0; }
+
+    /* Main content */
+    .resume-main {}
+    .resume-section { margin-bottom: 48px; }
+    .resume-section-title {
+      font-size: 0.7rem;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 20px;
+      padding-bottom: 12px;
+      border-bottom: 1px solid var(--border);
+    }
+    .exp-item { margin-bottom: 32px; }
+    .exp-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 4px;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+    .exp-role { font-size: 0.96rem; font-weight: 500; color: var(--text); }
+    .exp-date {
+      font-family: var(--mono);
+      font-size: 0.72rem;
+      color: var(--muted);
+      white-space: nowrap;
+    }
+    .exp-company { font-size: 0.82rem; color: var(--muted2); margin-bottom: 12px; }
+    .exp-bullets { padding-left: 0; list-style: none; }
+    .exp-bullets li {
+      font-size: 0.84rem;
+      color: var(--muted2);
+      margin-bottom: 6px;
+      padding-left: 16px;
+      position: relative;
+      line-height: 1.5;
+    }
+    .exp-bullets li::before {
+      content: "·";
+      position: absolute;
+      left: 0;
+      color: var(--muted);
+    }
+    .exp-tags { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 12px; }
+    .exp-tag {
+      font-size: 0.68rem;
+      font-family: var(--mono);
+      padding: 3px 8px;
+      background: var(--tag-bg);
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      color: var(--tag-text);
+    }
+
+    .edu-item { margin-bottom: 24px; }
+    .edu-degree { font-size: 0.96rem; font-weight: 500; color: var(--text); margin-bottom: 4px; }
+    .edu-school { font-size: 0.84rem; color: var(--muted2); margin-bottom: 4px; }
+    .edu-detail { font-size: 0.8rem; color: var(--muted); }
+
+    /* ── STATS BAR ── */
+    .stats-bar {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+      gap: 1px;
+      background: var(--border);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      overflow: hidden;
+      margin-bottom: 60px;
+    }
+    .stat-cell {
+      background: var(--surface);
+      padding: 24px 20px;
+      text-align: center;
+    }
+    .stat-num {
+      font-size: 1.8rem;
+      font-weight: 300;
+      letter-spacing: -0.04em;
+      color: var(--text);
+      line-height: 1;
+      margin-bottom: 6px;
+    }
+    .stat-label { font-size: 0.72rem; color: var(--muted); letter-spacing: 0.05em; }
+
+    /* ── CTA ── */
+    .cta-block {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 48px;
+      text-align: center;
+      margin-bottom: 80px;
+    }
+    .cta-block h2 {
+      font-size: 1.8rem;
+      font-weight: 300;
+      letter-spacing: -0.03em;
+      margin-bottom: 12px;
+    }
+    .cta-block h2 strong { font-weight: 600; }
+    .cta-block p { font-size: 0.9rem; color: var(--muted2); margin-bottom: 28px; }
+    .cta-actions { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+
+    /* ── FOOTER (common) ── */
+    .site-footer {
+      background: #0a0a0a;
+      color: #a0a0a0;
+      margin-top: 0;
+      font-family: var(--font);
+    }
+    .footer-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 60px 24px 40px;
+      display: grid;
+      grid-template-columns: 2fr 1.5fr 1fr;
+      gap: 48px;
+    }
+    @media (max-width: 768px) {
+      .footer-inner { grid-template-columns: 1fr; gap: 32px; }
+    }
+    .footer-logo { font-size: 1.1rem; font-weight: 600; color: #f0f0f0; text-decoration: none; letter-spacing: -0.02em; }
+    .footer-logo:hover { color: #ffffff; }
+    .footer-tagline { margin: 12px 0 0; font-size: 0.82rem; line-height: 1.6; color: #666; }
+    .footer-nav { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; }
+    .footer-nav-col { display: flex; flex-direction: column; gap: 8px; }
+    .footer-nav-heading { font-size: 0.7rem; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: #f0f0f0; margin-bottom: 4px; }
+    .footer-nav a { font-size: 0.84rem; color: #666; text-decoration: none; transition: color 0.2s; }
+    .footer-nav a:hover { color: #f0f0f0; }
+    .footer-social { display: flex; flex-direction: column; gap: 8px; }
+    .footer-social-links { display: flex; flex-direction: column; gap: 8px; margin-top: 4px; }
+    .footer-social-links a { display: flex; align-items: center; gap: 8px; font-size: 0.84rem; color: #666; text-decoration: none; transition: color 0.2s; }
+    .footer-social-links a:hover { color: #f0f0f0; }
+    .footer-bottom {
+      max-width: 1200px; margin: 0 auto; padding: 20px 24px;
+      border-top: 1px solid #1a1a1a;
+      display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px;
+      font-size: 0.8rem; color: #444;
+    }
+    .footer-bottom p { margin: 0; }
+    .footer-bottom-links { display: flex; gap: 20px; }
+    .footer-bottom-links a { color: #444; text-decoration: none; transition: color 0.2s; }
+    .footer-bottom-links a:hover { color: #a0a0a0; }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 600px) {
+      .hero h1 { font-size: 2rem; }
+      .cta-block { padding: 32px 20px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ── NAV ── -->
+  <nav class="site-nav">
+    <div class="nav-inner">
+      <a href="https://izazsarbudeen.github.io/index.html" class="nav-logo">Izaz Sarbudeen</a>
+      <ul class="nav-links">
+        <li><a href="https://izazsarbudeen.github.io/index.html#services">Services</a></li>
+        <li><a href="https://izazsarbudeen.github.io/projects.html">Projects</a></li>
+        <li><a href="https://izazsarbudeen.github.io/primavera.html">Primavera</a></li>
+        <li><a href="https://izazsarbudeen.github.io/documents.html">Documents</a></li>
+        <li><a href="https://izazsarbudeen.github.io/resume.html" class="active">Resume</a></li>
+        <li><a href="https://izazsarbudeen.github.io/contact.html">Contact</a></li>
+      </ul>
+      <span class="nav-badge">Available</span>
+    </div>
+  </nav>
+
+  <!-- ── BREADCRUMB ── -->
+  <div class="breadcrumb">
+    <a href="https://izazsarbudeen.github.io/index.html">Home</a>
+    <span>/</span>
+    <span>Resume / CV</span>
+  </div>
+
+  <!-- ── HERO ── -->
+  <section class="hero">
+    <p class="hero-label">Curriculum Vitae</p>
+    <h1>My <em>Resume</em><br>&amp; Experience</h1>
+    <p class="hero-sub">
+      Electrical Planning Engineer with hands-on EPC project experience across Saudi Aramco, SEC,
+      and international manufacturing — combining field execution with precision planning.
+    </p>
+    <div class="hero-tags">
+      <span>⚡ Electrical Engineering</span>
+      <span>📊 Primavera P6</span>
+      <span>🏗️ OHTL / 110kV UGC</span>
+      <span>📐 AutoCAD · Revit</span>
+      <span>🇸🇦 Saudi Arabia</span>
+    </div>
+    <div class="hero-actions">
+      <!--
+        REPLACE "your-resume.pdf" with the actual filename once you upload it to your repo.
+        e.g. href="https://izazsarbudeen.github.io/Izaz_Sarbudeen_CV.pdf"
+      -->
+      <a href="https://izazsarbudeen.github.io/resume.pdf" download class="btn-primary">
+        ↓ Download CV (PDF)
+      </a>
+      <a href="https://izazsarbudeen.github.io/contact.html" class="btn-secondary">
+        Get in Touch →
+      </a>
+    </div>
+  </section>
+
+  <!-- ── STATS ── -->
+  <div class="section" style="padding-bottom:0">
+    <div class="stats-bar">
+      <div class="stat-cell">
+        <div class="stat-num">4+</div>
+        <div class="stat-label">Years Experience</div>
+      </div>
+      <div class="stat-cell">
+        <div class="stat-num">50km</div>
+        <div class="stat-label">OHTL Designed</div>
+      </div>
+      <div class="stat-cell">
+        <div class="stat-num">3+</div>
+        <div class="stat-label">Major Projects</div>
+      </div>
+      <div class="stat-cell">
+        <div class="stat-num">10+</div>
+        <div class="stat-label">Tech Tools</div>
+      </div>
+      <div class="stat-cell">
+        <div class="stat-num">8</div>
+        <div class="stat-label">Certifications</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── PDF PREVIEW ── -->
+  <section class="section">
+    <p class="section-label">Document Preview</p>
+    <h2 class="section-title">View <strong>Resume</strong></h2>
+
+    <div class="preview-wrapper">
+      <div class="preview-bar">
+        <div class="preview-bar-left">
+          <div class="preview-dots">
+            <span></span><span></span><span></span>
+          </div>
+          <span class="preview-bar-label">Izaz_Sarbudeen_CV.pdf</span>
+        </div>
+        <div class="preview-bar-actions">
+          <a href="https://izazsarbudeen.github.io/resume.pdf" target="_blank">Open ↗</a>
+          <a href="https://izazsarbudeen.github.io/resume.pdf" download>Download ↓</a>
+        </div>
+      </div>
+
+      <div class="pdf-embed-area">
+        <!--
+          PDF PREVIEW:
+          Once you upload your resume PDF to the repo (e.g. as "resume.pdf"),
+          this iframe will automatically show it. No changes needed here.
+          The file should be at: https://izazsarbudeen.github.io/resume.pdf
+        -->
+        <iframe
+          id="resume-pdf"
+          src="https://izazsarbudeen.github.io/resume.pdf"
+          title="Izaz Sarbudeen Resume PDF"
+          loading="lazy"
+          style="display:none"
+        ></iframe>
+
+        <!-- Placeholder — shown until PDF loads -->
+        <div class="pdf-placeholder" id="pdf-placeholder">
+          <div class="pdf-placeholder-icon">📄</div>
+          <strong style="color:var(--muted2);font-size:0.92rem">Resume PDF Preview</strong>
+          <p>Upload your resume PDF to the GitHub repo as <code style="color:var(--muted2)">resume.pdf</code> to enable the live preview here.</p>
+          <span class="upload-hint">→ git add resume.pdf && git push</span>
+          <p style="font-size:0.78rem;margin-top:8px">The full resume is available below in the inline version.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── INLINE RESUME ── -->
+  <section class="section">
+    <p class="section-label">Full Details</p>
+    <h2 class="section-title">Complete <strong>Profile</strong></h2>
+
+    <div class="resume-grid">
+
+      <!-- SIDEBAR -->
+      <aside class="resume-sidebar">
+
+        <div class="sidebar-card">
+          <h3>Contact</h3>
+          <div class="sidebar-info-row">
+            <span class="icon">📍</span>
+            <span class="val">Jeddah / Eastern Province, Saudi Arabia</span>
+          </div>
+          <div class="sidebar-info-row">
+            <span class="icon">🌐</span>
+            <span class="val"><a href="https://izazsarbudeen.github.io" style="color:var(--muted2)">izazsarbudeen.github.io</a></span>
+          </div>
+          <div class="sidebar-info-row">
+            <span class="icon">💼</span>
+            <span class="val"><a href="https://linkedin.com/in/izazsarbudeen" target="_blank" style="color:var(--muted2)">linkedin.com/in/izazsarbudeen</a></span>
+          </div>
+          <div class="sidebar-info-row">
+            <span class="icon">🐙</span>
+            <span class="val"><a href="https://github.com/izazsarbudeen" target="_blank" style="color:var(--muted2)">github.com/izazsarbudeen</a></span>
+          </div>
+        </div>
+
+        <div class="sidebar-card">
+          <h3>Education</h3>
+          <div class="edu-detail" style="font-size:0.84rem;color:var(--muted2);margin-bottom:8px;font-weight:500">Bachelor of Engineering</div>
+          <div style="font-size:0.82rem;color:var(--muted);margin-bottom:4px">Electrical &amp; Electronics Engineering</div>
+          <div style="font-size:0.8rem;color:var(--muted);margin-bottom:8px">M.I.E.T Engineering College</div>
+          <div style="font-size:0.78rem;color:var(--muted);font-family:var(--mono)">CGPA: 7.65 / 10</div>
+        </div>
+
+        <div class="sidebar-card">
+          <h3>Languages</h3>
+          <ul>
+            <li>English 🇬🇧</li>
+            <li>Tamil 🇮🇳</li>
+            <li>Hindi 🇮🇳</li>
+            <li>Arabic 🇸🇦</li>
+          </ul>
+        </div>
+
+        <div class="sidebar-card">
+          <h3>Certifications</h3>
+          <div class="cert-list">
+            <div class="cert-item"><span class="c-icon">📊</span><span>Primavera P6</span></div>
+            <div class="cert-item"><span class="c-icon">📐</span><span>AutoCAD Essential</span></div>
+            <div class="cert-item"><span class="c-icon">🏗️</span><span>Revit MEP Professional</span></div>
+            <div class="cert-item"><span class="c-icon">🫀</span><span>BLS Provider</span></div>
+            <div class="cert-item"><span class="c-icon">⛽</span><span>Gas Tester</span></div>
+            <div class="cert-item"><span class="c-icon">📋</span><span>Work Permit Receiver</span></div>
+            <div class="cert-item"><span class="c-icon">🦺</span><span>Confined Space Supervisor</span></div>
+            <div class="cert-item"><span class="c-icon">🚑</span><span>SHA HSFA CPR AED</span></div>
+          </div>
+        </div>
+
+        <div class="sidebar-card">
+          <h3>Technical Skills</h3>
+          <div class="skill-tags">
+            <span class="skill-tag">AutoCAD</span>
+            <span class="skill-tag">Revit MEP</span>
+            <span class="skill-tag">MATLAB</span>
+            <span class="skill-tag">SCADA</span>
+            <span class="skill-tag">Primavera P6</span>
+            <span class="skill-tag">MS Project</span>
+            <span class="skill-tag">Python</span>
+            <span class="skill-tag">FastAPI</span>
+            <span class="skill-tag">HTML/CSS</span>
+            <span class="skill-tag">JavaScript</span>
+            <span class="skill-tag">Firebase</span>
+            <span class="skill-tag">Flutter</span>
+            <span class="skill-tag">Arduino</span>
+            <span class="skill-tag">110kV Systems</span>
+            <span class="skill-tag">OHTL</span>
+            <span class="skill-tag">EVM</span>
+          </div>
+        </div>
+
+      </aside>
+
+      <!-- MAIN CONTENT -->
+      <main class="resume-main">
+
+        <div class="resume-section">
+          <h3 class="resume-section-title">Professional Summary</h3>
+          <p style="font-size:0.88rem;color:var(--muted2);line-height:1.8">
+            Electrical Planning Engineer with hands-on EPC project experience across Saudi Aramco,
+            SEC, and international manufacturing. Skilled in overhead transmission line engineering,
+            underground cable projects, Primavera P6 scheduling, and AutoCAD/Revit design.
+            Combining rigorous field execution with precise project planning and a strong foundation
+            in electrical systems, commissioning, and quality control. Based in Saudi Arabia,
+            open to global engineering opportunities.
+          </p>
+        </div>
+
+        <div class="resume-section">
+          <h3 class="resume-section-title">Experience</h3>
+
+          <div class="exp-item">
+            <div class="exp-header">
+              <span class="exp-role">Electrical Design Engineer</span>
+              <span class="exp-date">Nov 2025 – Present</span>
+            </div>
+            <div class="exp-company">Holding Alojaimi · Saudi Arabia</div>
+            <ul class="exp-bullets">
+              <li>SEC Petro Rabigh Project and RWS-KHLD Underground Cable (UGC) Project.</li>
+              <li>Monitoring and supervising electrical project activities and subcontractor coordination.</li>
+              <li>Preparation and review of DTS &amp; DCS documents before client submission.</li>
+              <li>110kV underground cable laying, joint box installation, manhole installation, IR, VLF, PD, sheath and RMU testing.</li>
+              <li>Participating in weekly construction, safety, and quality meetings.</li>
+            </ul>
+            <div class="exp-tags">
+              <span class="exp-tag">110kV UGC</span>
+              <span class="exp-tag">SEC Projects</span>
+              <span class="exp-tag">DTS/DCS</span>
+              <span class="exp-tag">VLF Testing</span>
+              <span class="exp-tag">RMU</span>
+            </div>
+          </div>
+
+          <div class="exp-item">
+            <div class="exp-header">
+              <span class="exp-role">Electrical Site Engineer</span>
+              <span class="exp-date">Apr 2025 – Nov 2025</span>
+            </div>
+            <div class="exp-company">Yousif Ali Al-Jassim General Contracting Est · Saudi Arabia</div>
+            <ul class="exp-bullets">
+              <li>Worked on Aramco Project KM-90 electrical activities.</li>
+              <li>Monitored site execution, manpower, materials, and project progress.</li>
+              <li>Supervised sagging, crimping, pole dressing, earth rod testing, and electrical equipment installation.</li>
+              <li>Reviewed job safety plans and method statements.</li>
+            </ul>
+            <div class="exp-tags">
+              <span class="exp-tag">Saudi Aramco</span>
+              <span class="exp-tag">OHTL</span>
+              <span class="exp-tag">Site Supervision</span>
+              <span class="exp-tag">Safety Compliance</span>
+            </div>
+          </div>
+
+          <div class="exp-item">
+            <div class="exp-header">
+              <span class="exp-role">Electrical Site Engineer</span>
+              <span class="exp-date">Sep 2024 – Apr 2025</span>
+            </div>
+            <div class="exp-company">Technical Time Contracting · Saudi Arabia</div>
+            <ul class="exp-bullets">
+              <li>Aramco URMPP Jafurah Maintain Potential Gas Well Projects.</li>
+              <li>Project coordination, progress monitoring, and reporting activities.</li>
+              <li>Managed permit documentation, invoice follow-up, and timesheet preparation.</li>
+              <li>Coordinated site execution and safety meetings.</li>
+            </ul>
+            <div class="exp-tags">
+              <span class="exp-tag">Aramco URMPP</span>
+              <span class="exp-tag">Jafurah</span>
+              <span class="exp-tag">Progress Reporting</span>
+              <span class="exp-tag">Primavera P6</span>
+            </div>
+          </div>
+
+          <div class="exp-item">
+            <div class="exp-header">
+              <span class="exp-role">Electrical Engineer / QC Inspector</span>
+              <span class="exp-date">Apr 2022 – Jun 2024</span>
+            </div>
+            <div class="exp-company">India Japan Lighting Pvt Ltd · India</div>
+            <ul class="exp-bullets">
+              <li>QC inspection, ERP coordination, and production monitoring.</li>
+              <li>Prepared reports and tracked production progress across manufacturing lines.</li>
+              <li>Worked with IFS ERP system for inventory and manufacturing process management.</li>
+            </ul>
+            <div class="exp-tags">
+              <span class="exp-tag">QC Inspection</span>
+              <span class="exp-tag">IFS ERP</span>
+              <span class="exp-tag">Production Monitoring</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="resume-section">
+          <h3 class="resume-section-title">Key Projects</h3>
+
+          <div class="exp-item">
+            <div class="exp-header">
+              <span class="exp-role">OHTL — Saudi Aramco KM-90 (110kV)</span>
+              <span class="exp-date">2024–2025</span>
+            </div>
+            <ul class="exp-bullets">
+              <li>Designed and led overhead transmission line erection across 50 km routes.</li>
+              <li>Full scope: sagging, crimping, pole dressing, earth rod testing, commissioning.</li>
+              <li>Compliance with SAES and SEC standards throughout.</li>
+            </ul>
+          </div>
+
+          <div class="exp-item">
+            <div class="exp-header">
+              <span class="exp-role">SEC Petro Rabigh UGC Project (110kV)</span>
+              <span class="exp-date">2025–Present</span>
+            </div>
+            <ul class="exp-bullets">
+              <li>Underground cable laying and joint box / manhole installation.</li>
+              <li>IR, VLF, PD, sheath testing and RMU installation &amp; commissioning.</li>
+              <li>DTS/DCS document preparation and client submission.</li>
+            </ul>
+          </div>
+
+          <div class="exp-item">
+            <div class="exp-header">
+              <span class="exp-role">Visitor Analytics Dashboard (Firebase + Google Analytics)</span>
+              <span class="exp-date">Personal Project</span>
+            </div>
+            <ul class="exp-bullets">
+              <li>Live web dashboard integrating Google Analytics API with Firebase backend.</li>
+              <li>Real-time visitor insights with a clean, responsive interface.</li>
+            </ul>
+          </div>
+        </div>
+
+      </main>
+    </div>
+  </section>
+
+  <!-- ── CTA ── -->
+  <div class="section">
+    <div class="cta-block">
+      <h2>Ready to Work <strong>Together?</strong></h2>
+      <p>Open to engineering collaborations, EPC projects, and full-time opportunities in KSA &amp; internationally.</p>
+      <div class="cta-actions">
+        <a href="https://izazsarbudeen.github.io/contact.html" class="btn-primary">Get in Touch →</a>
+        <a href="https://linkedin.com/in/izazsarbudeen" target="_blank" rel="noopener" class="btn-secondary">LinkedIn ↗</a>
+        <a href="https://izazsarbudeen.github.io/projects.html" class="btn-secondary">View Projects</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── FOOTER ── -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <a href="https://izazsarbudeen.github.io/index.html" class="footer-logo">Izaz Sarbudeen</a>
+        <p class="footer-tagline">Electrical Planning Engineer &amp; Design Engineer<br>Based in Saudi Arabia — Working Globally</p>
+      </div>
+      <nav class="footer-nav" aria-label="Footer navigation">
+        <div class="footer-nav-col">
+          <span class="footer-nav-heading">Pages</span>
+          <a href="https://izazsarbudeen.github.io/index.html">Home</a>
+          <a href="https://izazsarbudeen.github.io/about.html">About</a>
+          <a href="https://izazsarbudeen.github.io/projects.html">Projects</a>
+          <a href="https://izazsarbudeen.github.io/primavera.html">Primavera P6</a>
+          <a href="https://izazsarbudeen.github.io/documents.html">Documents</a>
+          <a href="https://izazsarbudeen.github.io/resume.html">Resume / CV</a>
+          <a href="https://izazsarbudeen.github.io/contact.html">Contact</a>
+        </div>
+        <div class="footer-nav-col">
+          <span class="footer-nav-heading">Legal</span>
+          <a href="https://izazsarbudeen.github.io/privacy-policy.html">Privacy Policy</a>
+          <a href="https://izazsarbudeen.github.io/terms-of-use.html">Terms of Use</a>
+          <a href="https://izazsarbudeen.github.io/legal-notice.html">Legal Notice</a>
+        </div>
+      </nav>
+      <div class="footer-social">
+        <span class="footer-nav-heading">Connect</span>
+        <div class="footer-social-links">
+          <a href="https://linkedin.com/in/izazsarbudeen" target="_blank" rel="noopener">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+            LinkedIn
+          </a>
+          <a href="https://github.com/izazsarbudeen" target="_blank" rel="noopener">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+            GitHub
+          </a>
+          <a href="https://x.com/izazkhan2983" target="_blank" rel="noopener">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.744l7.737-8.835L1.254 2.25H8.08l4.253 5.622 5.911-5.622z"/></svg>
+            Twitter / X
+          </a>
+          <a href="https://instagram.com/izazkhan_786_" target="_blank" rel="noopener">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+            Instagram
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© <span id="footer-year"></span> Izaz Sarbudeen. All rights reserved. Made with ❤️</p>
+      <div class="footer-bottom-links">
+        <a href="https://izazsarbudeen.github.io/privacy-policy.html">Privacy</a>
+        <a href="https://izazsarbudeen.github.io/terms-of-use.html">Terms</a>
+        <a href="https://izazsarbudeen.github.io/legal-notice.html">Legal</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Auto-update year
+    document.getElementById('footer-year').textContent = new Date().getFullYear();
+
+    // Try to load PDF — if it exists, show iframe; if not, keep placeholder
+    const iframe = document.getElementById('resume-pdf');
+    const placeholder = document.getElementById('pdf-placeholder');
+
+    if (iframe) {
+      fetch(iframe.src, { method: 'HEAD' })
+        .then(r => {
+          if (r.ok) {
+            iframe.style.display = 'block';
+            if (placeholder) placeholder.style.display = 'none';
+          }
+        })
+        .catch(() => {});
+    }
+  </script>
+
+</body>
+</html>
