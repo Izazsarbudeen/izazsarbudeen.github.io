@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Legal Notice — Izaz Sarbudeen</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Syne:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+:root {
+  --electric: #00D4FF;
+  --electric-dim: #0099BB;
+  --volt: #AAFF00;
+  --volt-dim: #7ACC00;
+  --plasma: #FF6B35;
+  --violet: #8B5CF6;
+  --rose: #F43F5E;
+  --amber: #F59E0B;
+  --dark: #060810;
+  --dark-2: #0C1020;
+  --dark-3: #121828;
+  --dark-4: #1A2236;
+  --dark-5: #222E44;
+  --text: #E8EDF8;
+  --text-dim: #8896B0;
+  --muted: #4A5568;
+  --border: rgba(255,255,255,0.07);
+}
+html { scroll-behavior: smooth; }
+body { font-family: 'Plus Jakarta Sans', sans-serif; background: var(--dark); color: var(--text); overflow-x: hidden; }
+nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; display: flex; align-items: center; justify-content: space-between; padding: 0 clamp(24px,5vw,80px); height: 68px; background: rgba(6,8,16,.92); backdrop-filter: blur(24px); border-bottom: 1px solid rgba(0,212,255,.1); }
+.nav-logo { font-family: 'Syne', sans-serif; font-size: 17px; font-weight: 800; letter-spacing: .06em; background: linear-gradient(135deg, var(--electric), var(--volt)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; text-decoration: none; text-transform: uppercase; }
+.nav-links { display: flex; gap: clamp(20px,3vw,44px); list-style: none; }
+@media (max-width:700px) { .nav-links { display: none; } }
+.nav-links a { font-size: 12px; font-weight: 600; letter-spacing: .1em; text-transform: uppercase; color: var(--text-dim); text-decoration: none; transition: color .2s; }
+.nav-links a:hover { color: var(--electric); }
+.nav-badge { display: flex; align-items: center; gap: 7px; font-size: 11px; font-weight: 600; letter-spacing: .06em; color: var(--volt); background: rgba(170,255,0,.08); border: 1px solid rgba(170,255,0,.3); padding: 5px 14px; border-radius: 100px; }
+.nav-badge .dot { width: 6px; height: 6px; border-radius: 50%; background: var(--volt); animation: blink 2s infinite; }
+@keyframes blink { 0%,100%{opacity:1;box-shadow:0 0 6px var(--volt)} 50%{opacity:.3;box-shadow:none} }
+
+/* PAGE HERO — plasma/orange accent for Legal Notice */
+.page-hero { padding: 140px clamp(24px,5vw,80px) 80px; position: relative; overflow: hidden; border-bottom: 1px solid var(--border); }
+.page-hero-mesh { position: absolute; inset: 0; background: radial-gradient(ellipse 50% 80% at 10% 50%, rgba(255,107,53,.06) 0%, transparent 60%), radial-gradient(ellipse 40% 60% at 90% 30%, rgba(245,158,11,.04) 0%, transparent 50%); pointer-events: none; }
+.page-hero-grid { position: absolute; inset: 0; background-image: linear-gradient(rgba(255,107,53,.035) 1px, transparent 1px), linear-gradient(90deg, rgba(255,107,53,.035) 1px, transparent 1px); background-size: 60px 60px; mask-image: radial-gradient(ellipse 80% 80% at 50% 50%, black, transparent); pointer-events: none; }
+.breadcrumb { display: flex; align-items: center; gap: 10px; font-size: 11px; font-weight: 600; letter-spacing: .1em; text-transform: uppercase; color: var(--text-dim); margin-bottom: 24px; position: relative; z-index: 2; }
+.breadcrumb a { color: var(--plasma); text-decoration: none; }
+.breadcrumb a:hover { text-decoration: underline; }
+.breadcrumb-sep { color: var(--muted); }
+.page-eyebrow { display: inline-flex; align-items: center; gap: 10px; font-size: 10px; font-weight: 700; letter-spacing: .2em; text-transform: uppercase; color: var(--plasma); margin-bottom: 18px; position: relative; z-index: 2; }
+.page-eyebrow::before { content: ''; display: block; width: 28px; height: 1px; background: var(--plasma); }
+.page-title { font-family: 'Syne', sans-serif; font-size: clamp(40px,6vw,72px); font-weight: 800; line-height: 1; letter-spacing: -.02em; margin-bottom: 20px; position: relative; z-index: 2; }
+.page-title span { background: linear-gradient(90deg, var(--plasma), var(--amber)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+.page-meta { display: flex; align-items: center; gap: 24px; flex-wrap: wrap; position: relative; z-index: 2; }
+.meta-pill { display: inline-flex; align-items: center; gap: 7px; font-size: 11px; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; padding: 5px 14px; border-radius: 100px; border: 1px solid; }
+.meta-pill.plasma { color: var(--plasma); border-color: rgba(255,107,53,.3); background: rgba(255,107,53,.07); }
+.meta-pill.amber { color: var(--amber); border-color: rgba(245,158,11,.3); background: rgba(245,158,11,.07); }
+.meta-pill.electric { color: var(--electric); border-color: rgba(0,212,255,.3); background: rgba(0,212,255,.07); }
+
+/* LAYOUT */
+.legal-layout { display: grid; grid-template-columns: 260px 1fr; gap: 60px; max-width: 1200px; margin: 0 auto; padding: 72px clamp(24px,5vw,80px) 100px; align-items: start; }
+@media (max-width:900px) { .legal-layout { grid-template-columns: 1fr; } .toc-sticky { display: none; } }
+.toc-sticky { position: sticky; top: 92px; }
+.toc-label { font-size: 10px; font-weight: 700; letter-spacing: .2em; text-transform: uppercase; color: var(--plasma); margin-bottom: 16px; display: flex; align-items: center; gap: 8px; }
+.toc-label::before { content: ''; width: 20px; height: 1px; background: var(--plasma); }
+.toc-list { list-style: none; display: flex; flex-direction: column; gap: 2px; }
+.toc-list a { display: block; font-size: 12px; font-weight: 500; color: var(--text-dim); text-decoration: none; padding: 7px 12px; border-left: 2px solid var(--border); transition: all .2s; line-height: 1.4; }
+.toc-list a:hover { color: var(--plasma); border-left-color: var(--plasma); background: rgba(255,107,53,.04); }
+
+.legal-content { min-width: 0; }
+.section-block { margin-bottom: 64px; padding-bottom: 64px; border-bottom: 1px solid var(--border); }
+.section-block:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+.section-num { font-size: 10px; font-weight: 700; letter-spacing: .2em; text-transform: uppercase; color: var(--plasma); margin-bottom: 10px; display: flex; align-items: center; gap: 8px; }
+.section-num::before { content: ''; width: 20px; height: 1px; background: var(--plasma); }
+.section-heading { font-family: 'Syne', sans-serif; font-size: clamp(22px,3vw,30px); font-weight: 700; color: var(--text); margin-bottom: 20px; line-height: 1.15; letter-spacing: -.01em; }
+.legal-text { font-size: 15px; line-height: 1.9; color: var(--text-dim); font-weight: 300; margin-bottom: 20px; }
+.legal-text:last-child { margin-bottom: 0; }
+.legal-list { list-style: none; display: flex; flex-direction: column; gap: 10px; margin-bottom: 20px; }
+.legal-list li { font-size: 14px; line-height: 1.8; color: var(--text-dim); font-weight: 300; padding-left: 20px; position: relative; }
+.legal-list li::before { content: ''; position: absolute; left: 0; top: 11px; width: 5px; height: 5px; border-radius: 50%; background: var(--plasma); opacity: .6; }
+.highlight-box { background: var(--dark-3); border: 1px solid rgba(255,107,53,.15); border-left: 3px solid var(--plasma); border-radius: 0 8px 8px 0; padding: 20px 24px; margin: 24px 0; }
+.highlight-box p { font-size: 14px; line-height: 1.8; color: var(--text-dim); font-weight: 300; }
+.highlight-box strong { color: var(--plasma); font-weight: 600; }
+.warn-box { background: rgba(245,158,11,.06); border: 1px solid rgba(245,158,11,.2); border-left: 3px solid var(--amber); border-radius: 0 8px 8px 0; padding: 20px 24px; margin: 24px 0; }
+.warn-box p { font-size: 14px; line-height: 1.8; color: var(--text-dim); font-weight: 300; }
+.warn-box strong { color: var(--amber); font-weight: 600; }
+
+/* Identity card */
+.identity-card { background: var(--dark-3); border: 1px solid rgba(255,107,53,.2); border-radius: 12px; padding: 36px 40px; margin: 28px 0; }
+.identity-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 28px; }
+@media (max-width:600px) { .identity-grid { grid-template-columns: 1fr; } }
+.identity-row { display: flex; flex-direction: column; gap: 5px; }
+.identity-label { font-size: 10px; font-weight: 700; letter-spacing: .15em; text-transform: uppercase; color: var(--plasma); }
+.identity-value { font-size: 14px; font-weight: 400; color: var(--text); }
+.identity-value a { color: var(--electric); text-decoration: none; }
+.identity-value a:hover { text-decoration: underline; }
+
+.contact-cta { background: var(--dark-3); border: 1px solid var(--border); border-radius: 12px; padding: 36px 40px; text-align: center; margin-top: 64px; }
+.contact-cta h3 { font-family: 'Syne', sans-serif; font-size: 22px; font-weight: 700; margin-bottom: 10px; color: var(--text); }
+.contact-cta p { font-size: 14px; color: var(--text-dim); font-weight: 300; margin-bottom: 24px; line-height: 1.7; }
+.btn-primary { display: inline-flex; align-items: center; gap: 10px; padding: 13px 28px; background: linear-gradient(135deg, var(--plasma), #CC4A1A); color: #fff; font-family: 'Plus Jakarta Sans', sans-serif; font-size: 12px; font-weight: 700; letter-spacing: .05em; text-transform: uppercase; text-decoration: none; border-radius: 4px; transition: all .25s; box-shadow: 0 0 24px rgba(255,107,53,.25); }
+.btn-primary:hover { transform: translateY(-2px); box-shadow: 0 4px 32px rgba(255,107,53,.4); }
+.divider { height: 1px; background: linear-gradient(90deg, transparent, rgba(255,107,53,.15), transparent); }
+footer { background: var(--dark-2); border-top: 1px solid var(--border); padding: 48px clamp(24px,5vw,80px); display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 20px; }
+.footer-logo { font-family: 'Syne', sans-serif; font-size: 15px; font-weight: 800; letter-spacing: .06em; background: linear-gradient(135deg, var(--electric), var(--volt)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; text-transform: uppercase; }
+.footer-copy { font-size: 12px; color: var(--text-dim); font-weight: 300; }
+.footer-socials { display: flex; gap: 20px; flex-wrap: wrap; }
+.footer-social { font-size: 12px; font-weight: 600; letter-spacing: .06em; text-transform: uppercase; color: var(--text-dim); text-decoration: none; transition: color .2s; }
+.footer-social:hover { color: var(--electric); }
+.fade-up { opacity: 0; transform: translateY(20px); transition: opacity .6s ease, transform .6s ease; }
+.fade-up.visible { opacity: 1; transform: translateY(0); }
+</style>
+</head>
+<body>
+
+<nav>
+  <a class="nav-logo" href="index.html">Izaz Sarbudeen</a>
+  <ul class="nav-links">
+    <li><a href="index.html#services">Services</a></li>
+    <li><a href="index.html#projects">Projects</a></li>
+    <li><a href="index.html#experience">Experience</a></li>
+    <li><a href="index.html#contact">Contact</a></li>
+  </ul>
+  <div class="nav-badge"><span class="dot"></span> Available</div>
+</nav>
+
+<div class="page-hero">
+  <div class="page-hero-mesh"></div>
+  <div class="page-hero-grid"></div>
+  <div class="breadcrumb">
+    <a href="index.html">Home</a>
+    <span class="breadcrumb-sep">/</span>
+    <span>Legal Notice</span>
+  </div>
+  <div class="page-eyebrow">Legal</div>
+  <h1 class="page-title">Legal <span>Notice</span></h1>
+  <div class="page-meta">
+    <span class="meta-pill plasma">Effective: January 1, 2025</span>
+    <span class="meta-pill amber">Last Updated: June 2025</span>
+    <span class="meta-pill electric">Impressum</span>
+  </div>
+</div>
+
+<div class="legal-layout">
+  <aside class="toc-sticky fade-up">
+    <div class="toc-label">Contents</div>
+    <ul class="toc-list">
+      <li><a href="#identity">1. Site Owner Identity</a></li>
+      <li><a href="#hosting">2. Hosting Provider</a></li>
+      <li><a href="#purpose">3. Website Purpose</a></li>
+      <li><a href="#copyright">4. Copyright Notice</a></li>
+      <li><a href="#accuracy">5. Accuracy of Information</a></li>
+      <li><a href="#professional">6. Professional Disclaimer</a></li>
+      <li><a href="#liability">7. Liability</a></li>
+      <li><a href="#jurisdiction">8. Jurisdiction</a></li>
+      <li><a href="#dmca">9. Copyright Complaints</a></li>
+      <li><a href="#contact-section">10. Contact</a></li>
+    </ul>
+  </aside>
+
+  <main class="legal-content">
+
+    <div class="highlight-box fade-up">
+      <p><strong>Legal Notice / Impressum:</strong> This page provides mandatory legal disclosures about the owner and operator of this website, in compliance with applicable transparency and information obligations.</p>
+    </div>
+
+    <div id="identity" class="section-block fade-up">
+      <div class="section-num">01</div>
+      <h2 class="section-heading">Site Owner Identity</h2>
+      <p class="legal-text">This website is owned and operated by an individual professional. The following information identifies the responsible party:</p>
+
+      <div class="identity-card">
+        <div class="identity-grid">
+          <div class="identity-row">
+            <span class="identity-label">Full Name</span>
+            <span class="identity-value">Izaz Sarbudeen</span>
+          </div>
+          <div class="identity-row">
+            <span class="identity-label">Profession</span>
+            <span class="identity-value">Electrical Planning &amp; Design Engineer</span>
+          </div>
+          <div class="identity-row">
+            <span class="identity-label">Location</span>
+            <span class="identity-value">Kingdom of Saudi Arabia</span>
+          </div>
+          <div class="identity-row">
+            <span class="identity-label">Website</span>
+            <span class="identity-value"><a href="https://izazsarbudeen.github.io">izazsarbudeen.github.io</a></span>
+          </div>
+          <div class="identity-row">
+            <span class="identity-label">LinkedIn</span>
+            <span class="identity-value"><a href="https://linkedin.com/in/izazsarbudeen" target="_blank">linkedin.com/in/izazsarbudeen</a></span>
+          </div>
+          <div class="identity-row">
+            <span class="identity-label">GitHub</span>
+            <span class="identity-value"><a href="https://github.com/izazsarbudeen" target="_blank">github.com/izazsarbudeen</a></span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="hosting" class="section-block fade-up">
+      <div class="section-num">02</div>
+      <h2 class="section-heading">Hosting Provider</h2>
+      <p class="legal-text">This website is hosted via GitHub Pages, a static website hosting service provided by GitHub, Inc. GitHub Pages serves website files directly from a GitHub repository.</p>
+      <ul class="legal-list">
+        <li><strong style="color:var(--text);font-weight:600">Service Provider:</strong> GitHub, Inc.</li>
+        <li><strong style="color:var(--text);font-weight:600">Address:</strong> 88 Colin P. Kelly Jr. Street, San Francisco, CA 94107, USA</li>
+        <li><strong style="color:var(--text);font-weight:600">Website:</strong> <a href="https://github.com" target="_blank" style="color:var(--electric)">github.com</a></li>
+        <li><strong style="color:var(--text);font-weight:600">Privacy Policy:</strong> <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement" target="_blank" style="color:var(--electric)">GitHub Privacy Statement</a></li>
+      </ul>
+      <p class="legal-text">GitHub may collect certain technical data about visitors as part of hosting the site. Please refer to GitHub's Privacy Statement for details on their data collection practices.</p>
+    </div>
+
+    <div id="purpose" class="section-block fade-up">
+      <div class="section-num">03</div>
+      <h2 class="section-heading">Website Purpose</h2>
+      <p class="legal-text">This website serves exclusively as a personal professional portfolio. Its purpose is to:</p>
+      <ul class="legal-list">
+        <li>Present professional experience, skills, and qualifications of Izaz Sarbudeen</li>
+        <li>Showcase engineering projects and technical work</li>
+        <li>Provide a contact channel for professional inquiries and opportunities</li>
+        <li>Share professional documents such as CV and certifications</li>
+      </ul>
+      <p class="legal-text">This website does not constitute a commercial business, e-commerce platform, or offer of services within the meaning of consumer protection laws unless an explicit service agreement has been entered into separately.</p>
+    </div>
+
+    <div id="copyright" class="section-block fade-up">
+      <div class="section-num">04</div>
+      <h2 class="section-heading">Copyright Notice</h2>
+      <p class="legal-text">© 2025 Izaz Sarbudeen. All rights reserved.</p>
+      <p class="legal-text">All content on this website — including but not limited to text, technical descriptions, project documentation, images, graphics, CAD references, code, and the overall website design — is protected by copyright law and belongs to Izaz Sarbudeen unless otherwise stated.</p>
+      <div class="warn-box">
+        <p><strong>Prohibited without written permission:</strong> Reproduction, distribution, public display, creation of derivative works, or any commercial use of the content on this website. Violation of these rights may result in civil and/or criminal liability under applicable law.</p>
+      </div>
+      <p class="legal-text">Third-party trademarks, logos, or brand names referenced on this website remain the property of their respective owners. Their appearance does not imply any sponsorship, affiliation, or endorsement.</p>
+    </div>
+
+    <div id="accuracy" class="section-block fade-up">
+      <div class="section-num">05</div>
+      <h2 class="section-heading">Accuracy of Information</h2>
+      <p class="legal-text">I make every reasonable effort to ensure the accuracy and currency of the information presented on this website. However, I cannot guarantee that all information is complete, accurate, or up to date at all times. Content is subject to change without notice.</p>
+      <p class="legal-text">Professional experience, certifications, and project information reflect facts as of the time of publication. More recent credentials or projects may not yet be reflected on the site.</p>
+      <div class="highlight-box">
+        <p><strong>Note:</strong> Visitor statistics displayed on this website (total visitors, countries, etc.) are provided for informational purposes and are derived from anonymized analytics data. They should not be taken as legally verified figures.</p>
+      </div>
+    </div>
+
+    <div id="professional" class="section-block fade-up">
+      <div class="section-num">06</div>
+      <h2 class="section-heading">Professional Disclaimer</h2>
+      <p class="legal-text">The content of this portfolio website is provided for informational and professional presentation purposes only. Nothing on this website constitutes professional engineering advice, legal advice, financial advice, or any other form of regulated professional advice.</p>
+      <p class="legal-text">Specific engineering work referenced on this site was performed in the context of formal employment or contracted projects under appropriate supervision and in compliance with applicable standards. Any professional engagement arising from contact via this website would be governed by a separate formal agreement.</p>
+    </div>
+
+    <div id="liability" class="section-block fade-up">
+      <div class="section-num">07</div>
+      <h2 class="section-heading">Limitation of Liability</h2>
+      <p class="legal-text">To the maximum extent permitted by applicable law, I disclaim all liability for:</p>
+      <ul class="legal-list">
+        <li>Any direct, indirect, incidental, special, or consequential damages arising from the use of or inability to use this website</li>
+        <li>Inaccuracies, errors, or omissions in the content of this website</li>
+        <li>Damages resulting from reliance on information published on this website</li>
+        <li>Technical disruptions, server downtime, or data loss</li>
+        <li>Content or practices of third-party websites linked from this site</li>
+      </ul>
+      <p class="legal-text">This limitation applies regardless of the legal theory upon which any claim is based, including contract, tort, strict liability, or otherwise.</p>
+    </div>
+
+    <div id="jurisdiction" class="section-block fade-up">
+      <div class="section-num">08</div>
+      <h2 class="section-heading">Jurisdiction</h2>
+      <p class="legal-text">This website is operated from the Kingdom of Saudi Arabia. All matters relating to this website, its content, and these legal notices are governed by the laws of the Kingdom of Saudi Arabia.</p>
+      <p class="legal-text">If any provision of this Legal Notice is found to be invalid, illegal, or unenforceable under applicable law, the remaining provisions will continue in full force and effect.</p>
+      <p class="legal-text">For visitors outside Saudi Arabia, please note that by accessing this website you agree to comply with applicable local laws regarding online conduct and acceptable content.</p>
+    </div>
+
+    <div id="dmca" class="section-block fade-up">
+      <div class="section-num">09</div>
+      <h2 class="section-heading">Copyright Complaints</h2>
+      <p class="legal-text">If you believe that content on this website infringes your copyright or other intellectual property rights, please contact me immediately with the following information:</p>
+      <ul class="legal-list">
+        <li>A description of the copyrighted work or intellectual property you claim has been infringed</li>
+        <li>The specific URL(s) of the content you believe is infringing</li>
+        <li>Your contact information (name, address, telephone number, and email address)</li>
+        <li>A statement that you have a good faith belief that the use is not authorized by the copyright owner</li>
+        <li>A declaration that the information in your notice is accurate and that you are the copyright owner or authorized to act on their behalf</li>
+      </ul>
+      <p class="legal-text">I take copyright claims seriously and will respond promptly to valid notices. Confirmed infringement will be removed without undue delay.</p>
+    </div>
+
+    <div id="contact-section" class="section-block fade-up">
+      <div class="section-num">10</div>
+      <h2 class="section-heading">Contact</h2>
+      <p class="legal-text">For all legal inquiries, copyright complaints, or questions about this Legal Notice, please contact me through the following channels:</p>
+      <ul class="legal-list">
+        <li>Contact Form: <a href="https://izazsarbudeen.github.io/contact.html" style="color:var(--plasma)">izazsarbudeen.github.io/contact.html</a></li>
+        <li>LinkedIn: <a href="https://linkedin.com/in/izazsarbudeen" style="color:var(--plasma)" target="_blank">linkedin.com/in/izazsarbudeen</a></li>
+        <li>GitHub: <a href="https://github.com/izazsarbudeen" style="color:var(--plasma)" target="_blank">github.com/izazsarbudeen</a></li>
+      </ul>
+      <p class="legal-text">I aim to respond to all legitimate legal inquiries within 5 business days.</p>
+    </div>
+
+    <div class="contact-cta fade-up">
+      <h3>Legal Inquiries</h3>
+      <p>For formal legal requests or copyright concerns, please reach out directly and I'll respond promptly.</p>
+      <a href="https://izazsarbudeen.github.io/contact.html" class="btn-primary">Contact Me →</a>
+    </div>
+
+  </main>
+</div>
+
+<div class="divider"></div>
+
+<footer>
+  <div class="footer-logo">Izaz Sarbudeen</div>
+  <div class="footer-copy">© 2025 Izaz Sarbudeen. All rights reserved.</div>
+  <div class="footer-socials">
+    <a href="https://linkedin.com/in/izazsarbudeen" class="footer-social" target="_blank">LinkedIn</a>
+    <a href="https://github.com/izazsarbudeen" class="footer-social" target="_blank">GitHub</a>
+    <a href="https://x.com/izazkhan2983" class="footer-social" target="_blank">Twitter</a>
+    <a href="privacy-policy.html" class="footer-social">Privacy</a>
+    <a href="terms-of-use.html" class="footer-social">Terms</a>
+    <a href="legal-notice.html" class="footer-social" style="color:var(--plasma)">Legal</a>
+  </div>
+</footer>
+
+<script>
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry, i) => {
+      if (entry.isIntersecting) setTimeout(() => entry.target.classList.add('visible'), 80 * i);
+    });
+  }, { threshold: 0.08 });
+  document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+</script>
+</body>
+</html>
