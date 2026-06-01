@@ -823,7 +823,11 @@ footer {
     <a href="https://instagram.com/izazkhan_786_" class="footer-social" target="_blank">Instagram</a>
   </div>
 </footer>
-
+  
+<script>
+  document.getElementById("currentYear").textContent = new Date().getFullYear();
+</script>
+  
 <script>
   // Fade up animation
   const observer = new IntersectionObserver((entries) => {
@@ -835,9 +839,9 @@ footer {
   }, { threshold: 0.08 });
   document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
   
- <script>
-  document.getElementById("currentYear").textContent = new Date().getFullYear();
-</script>
+ 
+
+  
   // Mobile menu toggle
   function toggleMenu() {
     const menu = document.getElementById('mobileMenu');
