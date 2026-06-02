@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>About — Izaz Sarbudeen | Electrical Planning Engineer</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Syne:wght@400;500;600;700;800&display=swap" rel="stylesheet"/>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --electric:#00D4FF;--electric-dim:#0099BB;
+  --volt:#AAFF00;--volt-dim:#7ACC00;
+  --plasma:#FF6B35;--plasma-dim:#CC4A1A;
+  --violet:#8B5CF6;--violet-dim:#6D3FD0;
+  --rose:#F43F5E;--amber:#F59E0B;
+  --dark:#060810;--dark-2:#0C1020;--dark-3:#121828;--dark-4:#1A2236;--dark-5:#222E44;
+  --text:#E8EDF8;--text-dim:#8896B0;--muted:#4A5568;
+  --border:rgba(255,255,255,0.07);
+}
+html{scroll-behavior:smooth}
+body{font-family:'Plus Jakarta Sans',sans-serif;background:var(--dark);color:var(--text);overflow-x:hidden;line-height:1.65}
+
+/* ── VIDEO BACKGROUND ── */
+.video-bg{position:fixed;inset:0;z-index:-2;overflow:hidden;pointer-events:none}
+.video-bg video{width:100%;height:100%;object-fit:cover;opacity:0.07;filter:saturate(0.4) brightness(0.6)}
+.video-bg-overlay{position:fixed;inset:0;z-index:-1;pointer-events:none;background:linear-gradient(to bottom,rgba(6,8,16,0.88) 0%,rgba(6,8,16,0.72) 40%,rgba(6,8,16,0.88) 100%)}
+
+/* ── NAV ── */
+nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;align-items:center;justify-content:space-between;padding:0 clamp(16px,5vw,80px);height:68px;background:rgba(6,8,16,0.96);backdrop-filter:blur(24px);border-bottom:1px solid rgba(0,212,255,0.1)}
+.nav-logo{font-family:'Syne',sans-serif;font-size:17px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;text-decoration:none;background:linear-gradient(135deg,var(--electric),var(--volt));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;white-space:nowrap}
+.nav-links{display:flex;gap:clamp(16px,2.5vw,40px);list-style:none}
+.nav-links a{font-size:12px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--text-dim);text-decoration:none;transition:color .2s;white-space:nowrap}
+.nav-links a:hover,.nav-links a.active{color:var(--electric)}
+.nav-badge{display:flex;align-items:center;gap:7px;font-size:11px;font-weight:600;letter-spacing:.06em;color:var(--volt);background:rgba(170,255,0,.08);border:1px solid rgba(170,255,0,.3);padding:5px 14px;border-radius:100px;white-space:nowrap}
+.nav-badge .dot{width:6px;height:6px;border-radius:50%;background:var(--volt);animation:blink 2s infinite;flex-shrink:0}
+@keyframes blink{0%,100%{opacity:1;box-shadow:0 0 6px var(--volt)}50%{opacity:.3;box-shadow:none}}
+.nav-toggle{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:4px;background:none;border:none}
+.nav-toggle span{display:block;width:22px;height:2px;background:var(--text-dim);border-radius:2px;transition:all .3s}
+.mobile-nav{display:none;position:fixed;top:68px;left:0;right:0;background:rgba(6,8,16,.98);backdrop-filter:blur(24px);border-bottom:1px solid rgba(0,212,255,.1);padding:20px clamp(16px,5vw,40px);z-index:190;flex-direction:column}
+.mobile-nav.open{display:flex}
+.mobile-nav a{font-size:14px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--text-dim);text-decoration:none;padding:14px 0;border-bottom:1px solid var(--border);transition:color .2s}
+.mobile-nav a:hover{color:var(--electric)}
+.mobile-nav a:last-child{border-bottom:none}
+@media(max-width:860px){.nav-links{display:none}.nav-badge{display:none}.nav-toggle{display:flex}}
+
+/* ── PAGE HERO ── */
+.page-hero{min-height:100vh;display:flex;align-items:center;padding:clamp(100px,13vw,140px) clamp(16px,5vw,80px) clamp(60px,8vw,90px);position:relative;overflow:hidden;border-bottom:1px solid var(--border)}
+.hero-grid-lines{position:absolute;inset:0;pointer-events:none;background-image:linear-gradient(rgba(0,212,255,.04) 1px,transparent 1px),linear-gradient(90deg,rgba(0,212,255,.04) 1px,transparent 1px);background-size:60px 60px;mask-image:radial-gradient(ellipse 80% 80% at 50% 50%,black,transparent)}
+.hero-mesh{position:absolute;inset:0;pointer-events:none;background:radial-gradient(ellipse 50% 65% at 8% 60%,rgba(0,212,255,.05) 0%,transparent 55%),radial-gradient(ellipse 40% 50% at 92% 30%,rgba(170,255,0,.03) 0%,transparent 50%)}
+.hero-inner{position:relative;z-index:2;display:grid;grid-template-columns:1fr 1fr;gap:clamp(40px,6vw,100px);align-items:center;width:100%}
+@media(max-width:860px){.hero-inner{grid-template-columns:1fr}.hero-right-visual{display:none}}
+
+.eyebrow{display:inline-flex;align-items:center;gap:10px;font-size:11px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--electric);margin-bottom:24px}
+.eyebrow::before{content:'';display:block;width:32px;height:1px;background:var(--electric)}
+.hero-title{font-family:'Syne',sans-serif;font-size:clamp(44px,6vw,84px);font-weight:800;line-height:.96;letter-spacing:-.025em;margin-bottom:20px}
+.hero-title .grad{background:linear-gradient(90deg,var(--electric),var(--volt));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;display:block}
+.hero-desc{font-size:clamp(14px,1.6vw,16px);line-height:1.95;color:var(--text-dim);font-weight:300;max-width:500px;margin-bottom:36px}
+.hero-pills{display:flex;gap:9px;flex-wrap:wrap;margin-bottom:36px}
+.hpill{display:inline-flex;align-items:center;gap:7px;font-size:11px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;padding:6px 14px;border-radius:100px;border:1px solid}
+.hp-e{color:var(--electric);border-color:rgba(0,212,255,.3);background:rgba(0,212,255,.07)}
+.hp-v{color:var(--volt);border-color:rgba(170,255,0,.3);background:rgba(170,255,0,.07)}
+.hp-p{color:var(--plasma);border-color:rgba(255,107,53,.3);background:rgba(255,107,53,.07)}
+.hp-vi{color:var(--violet);border-color:rgba(139,92,246,.3);background:rgba(139,92,246,.07)}
+.hero-ctas{display:flex;gap:12px;flex-wrap:wrap}
+.btn-primary{display:inline-flex;align-items:center;gap:10px;padding:13px 28px;background:linear-gradient(135deg,var(--electric),#006EFF);color:var(--dark);font-family:'Plus Jakarta Sans',sans-serif;font-size:12px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;text-decoration:none;border-radius:4px;transition:all .25s;box-shadow:0 0 24px rgba(0,212,255,.25);white-space:nowrap}
+.btn-primary:hover{transform:translateY(-2px);box-shadow:0 4px 32px rgba(0,212,255,.4)}
+.btn-volt{display:inline-flex;align-items:center;gap:10px;padding:12px 28px;border:1px solid rgba(170,255,0,.4);color:var(--volt);font-family:'Plus Jakarta Sans',sans-serif;font-size:12px;font-weight:600;letter-spacing:.05em;text-transform:uppercase;text-decoration:none;border-radius:4px;transition:all .25s;white-space:nowrap}
+.btn-volt:hover{background:rgba(170,255,0,.08);border-color:var(--volt)}
+.btn-outline{display:inline-flex;align-items:center;gap:10px;padding:12px 28px;border:1px solid rgba(0,212,255,.4);color:var(--electric);font-family:'Plus Jakarta Sans',sans-serif;font-size:12px;font-weight:600;letter-spacing:.05em;text-transform:uppercase;text-decoration:none;border-radius:4px;transition:all .25s;white-space:nowrap}
+.btn-outline:hover{background:rgba(0,212,255,.08);border-color:var(--electric)}
+
+/* Hero right — stat cards */
+.hero-right-visual{display:flex;flex-direction:column;gap:16px}
+.stat-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.stat-card{background:rgba(18,24,40,.85);border:1px solid var(--border);padding:22px 12px;text-align:center;border-radius:8px;position:relative;overflow:hidden;backdrop-filter:blur(8px);transition:border-color .3s,transform .3s}
+.stat-card:hover{transform:translateY(-3px)}
+.stat-card::before{content:'';position:absolute;top:0;left:0;right:0;height:2px}
+.stat-card:nth-child(1)::before{background:linear-gradient(90deg,var(--electric),transparent)}
+.stat-card:nth-child(2)::before{background:linear-gradient(90deg,var(--volt),transparent)}
+.stat-card:nth-child(3)::before{background:linear-gradient(90deg,var(--plasma),transparent)}
+.stat-card:nth-child(1):hover{border-color:rgba(0,212,255,.3)}.stat-card:nth-child(2):hover{border-color:rgba(170,255,0,.3)}.stat-card:nth-child(3):hover{border-color:rgba(255,107,53,.3)}
+.stat-num{font-family:'Syne',sans-serif;font-size:clamp(28px,3vw,38px);font-weight:800;line-height:1;margin-bottom:6px}
+.stat-card:nth-child(1) .stat-num{color:var(--electric)}.stat-card:nth-child(2) .stat-num{color:var(--volt)}.stat-card:nth-child(3) .stat-num{color:var(--plasma)}
+.stat-label{font-size:10px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--text-dim)}
+.profile-quote{background:rgba(18,24,40,.85);border:1px solid rgba(0,212,255,.2);border-left:3px solid var(--electric);border-radius:0 8px 8px 0;padding:20px 24px;backdrop-filter:blur(8px)}
+.profile-quote p{font-size:14px;line-height:1.85;color:var(--text-dim);font-weight:300;font-style:italic}
+.profile-quote strong{color:var(--electric);font-weight:600;font-style:normal}
+
+/* ── SECTIONS ── */
+section{padding:clamp(64px,9vw,100px) clamp(16px,5vw,80px)}
+.sec-eyebrow{display:inline-flex;align-items:center;gap:10px;font-size:10px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;margin-bottom:16px}
+.sec-eyebrow::before{content:'';display:block;width:28px;height:1px}
+.sec-eyebrow.e{color:var(--electric)}.sec-eyebrow.e::before{background:var(--electric)}
+.sec-eyebrow.v{color:var(--volt)}.sec-eyebrow.v::before{background:var(--volt)}
+.sec-eyebrow.p{color:var(--plasma)}.sec-eyebrow.p::before{background:var(--plasma)}
+.sec-eyebrow.vi{color:var(--violet)}.sec-eyebrow.vi::before{background:var(--violet)}
+.sec-eyebrow.a{color:var(--amber)}.sec-eyebrow.a::before{background:var(--amber)}
+.sec-title{font-family:'Syne',sans-serif;font-size:clamp(28px,4vw,48px);font-weight:700;line-height:1.06;letter-spacing:-.02em;color:var(--text);margin-bottom:14px}
+.sec-sub{font-size:14px;line-height:1.8;color:var(--text-dim);font-weight:300;max-width:520px;margin-bottom:48px}
+
+/* ── WHO I AM ── */
+#who{background:var(--dark-2)}
+.who-layout{display:grid;grid-template-columns:1fr 1fr;gap:clamp(32px,5vw,72px);align-items:start}
+@media(max-width:860px){.who-layout{grid-template-columns:1fr}}
+.who-text p{font-size:15px;line-height:2;color:var(--text-dim);font-weight:300;margin-bottom:18px}
+.who-text p:last-child{margin-bottom:0}
+.who-text strong{color:var(--text);font-weight:600}
+.value-cards{display:flex;flex-direction:column;gap:16px}
+.value-card{background:var(--dark-3);border:1px solid var(--border);border-radius:10px;padding:22px 24px;position:relative;overflow:hidden;transition:border-color .3s,transform .25s}
+.value-card:hover{transform:translateY(-3px)}
+.value-card::before{content:'';position:absolute;left:0;top:0;bottom:0;width:3px}
+.value-card:nth-child(1)::before{background:var(--electric)}.value-card:nth-child(1):hover{border-color:rgba(0,212,255,.3)}
+.value-card:nth-child(2)::before{background:var(--volt)}.value-card:nth-child(2):hover{border-color:rgba(170,255,0,.3)}
+.value-card:nth-child(3)::before{background:var(--plasma)}.value-card:nth-child(3):hover{border-color:rgba(255,107,53,.3)}
+.value-card:nth-child(4)::before{background:var(--violet)}.value-card:nth-child(4):hover{border-color:rgba(139,92,246,.3)}
+.value-card:nth-child(5)::before{background:var(--amber)}.value-card:nth-child(5):hover{border-color:rgba(245,158,11,.3)}
+.vc-title{font-family:'Syne',sans-serif;font-size:14px;font-weight:700;color:var(--text);margin-bottom:6px;display:flex;align-items:center;gap:10px}
+.vc-icon{font-size:17px}
+.vc-desc{font-size:12px;color:var(--text-dim);font-weight:300;line-height:1.75}
+
+/* ── SKILLS ── */
+#skills{background:var(--dark)}
+.skills-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:0;background:var(--border);border:1px solid var(--border);border-radius:12px;overflow:hidden}
+.skill-col{background:var(--dark-2);padding:clamp(24px,3vw,36px);border-top:2px solid}
+.skill-col:nth-child(1){border-color:var(--electric)}.skill-col:nth-child(2){border-color:var(--volt)}.skill-col:nth-child(3){border-color:var(--plasma)}.skill-col:nth-child(4){border-color:var(--violet)}.skill-col:nth-child(5){border-color:var(--amber)}
+.skill-cat{font-size:10px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;margin-bottom:20px}
+.skill-col:nth-child(1) .skill-cat{color:var(--electric)}.skill-col:nth-child(2) .skill-cat{color:var(--volt)}.skill-col:nth-child(3) .skill-cat{color:var(--plasma)}.skill-col:nth-child(4) .skill-cat{color:var(--violet)}.skill-col:nth-child(5) .skill-cat{color:var(--amber)}
+.skill-items{display:flex;flex-direction:column;gap:10px}
+.skill-item{font-size:13px;color:var(--text-dim);font-weight:400;display:flex;align-items:center;gap:10px;transition:color .2s}
+.skill-item:hover{color:var(--text)}
+.skill-item::before{content:'';width:4px;height:4px;border-radius:50%;flex-shrink:0;background:currentColor;opacity:.5}
+
+/* ── CERTIFICATIONS ── */
+#certs{background:var(--dark-2)}
+.cert-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:14px}
+.cert-card{background:var(--dark-3);border:1px solid var(--border);border-radius:10px;padding:22px 20px;display:flex;align-items:flex-start;gap:14px;position:relative;overflow:hidden;transition:border-color .3s,transform .25s}
+.cert-card:hover{transform:translateY(-3px)}
+.cert-card::before{content:'';position:absolute;bottom:0;left:0;right:0;height:2px;transform:scaleX(0);transform-origin:left;transition:transform .3s}
+.cert-card:hover::before{transform:scaleX(1)}
+.cert-card:nth-child(1)::before,.cert-card:nth-child(1):hover{--b:rgba(0,212,255,.3);border-color:var(--b)}.cert-card:nth-child(1)::before{background:var(--electric)}
+.cert-card:nth-child(2)::before,.cert-card:nth-child(2):hover{--b:rgba(170,255,0,.3);border-color:var(--b)}.cert-card:nth-child(2)::before{background:var(--volt)}
+.cert-card:nth-child(3)::before,.cert-card:nth-child(3):hover{--b:rgba(139,92,246,.3);border-color:var(--b)}.cert-card:nth-child(3)::before{background:var(--violet)}
+.cert-card:nth-child(4)::before,.cert-card:nth-child(4):hover{--b:rgba(244,63,94,.3);border-color:var(--b)}.cert-card:nth-child(4)::before{background:var(--rose)}
+.cert-card:nth-child(5)::before,.cert-card:nth-child(5):hover{--b:rgba(255,107,53,.3);border-color:var(--b)}.cert-card:nth-child(5)::before{background:var(--plasma)}
+.cert-card:nth-child(6)::before,.cert-card:nth-child(6):hover{--b:rgba(245,158,11,.3);border-color:var(--b)}.cert-card:nth-child(6)::before{background:var(--amber)}
+.cert-card:nth-child(7)::before,.cert-card:nth-child(7):hover{--b:rgba(0,212,255,.3);border-color:var(--b)}.cert-card:nth-child(7)::before{background:var(--electric)}
+.cert-card:nth-child(8)::before,.cert-card:nth-child(8):hover{--b:rgba(170,255,0,.3);border-color:var(--b)}.cert-card:nth-child(8)::before{background:var(--volt)}
+.cert-icon{font-size:24px;flex-shrink:0}
+.cert-name{font-family:'Syne',sans-serif;font-size:13px;font-weight:700;color:var(--text);line-height:1.3}
+.cert-body{font-size:11px;color:var(--text-dim);font-weight:300;margin-top:4px;line-height:1.5}
+
+/* ── PERSONAL ── */
+#personal{background:var(--dark)}
+.personal-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px}
+.personal-card{background:var(--dark-3);border:1px solid var(--border);border-radius:12px;padding:clamp(24px,3vw,36px);position:relative;overflow:hidden;transition:border-color .3s,transform .3s}
+.personal-card:hover{transform:translateY(-4px)}
+.personal-card::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:var(--acc,var(--electric))}
+.personal-card:nth-child(1){--acc:var(--electric)}.personal-card:nth-child(1):hover{border-color:rgba(0,212,255,.3)}
+.personal-card:nth-child(2){--acc:var(--volt)}.personal-card:nth-child(2):hover{border-color:rgba(170,255,0,.3)}
+.personal-card:nth-child(3){--acc:var(--plasma)}.personal-card:nth-child(3):hover{border-color:rgba(255,107,53,.3)}
+.pc-icon{font-size:32px;margin-bottom:16px;display:block}
+.pc-title{font-family:'Syne',sans-serif;font-size:17px;font-weight:700;color:var(--text);margin-bottom:10px}
+.pc-desc{font-size:13px;color:var(--text-dim);font-weight:300;line-height:1.85}
+
+/* ── CTA ── */
+.cta-section{background:var(--dark-2);border-top:1px solid var(--border);padding:clamp(56px,8vw,88px) clamp(16px,5vw,80px)}
+.cta-inner{max-width:600px;margin:0 auto;text-align:center}
+.cta-inner .sec-eyebrow{justify-content:center}
+.cta-title{font-family:'Syne',sans-serif;font-size:clamp(26px,4vw,44px);font-weight:700;letter-spacing:-.02em;margin-bottom:14px}
+.cta-sub{font-size:15px;line-height:1.9;color:var(--text-dim);font-weight:300;margin-bottom:32px}
+.cta-actions{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+
+/* ── VIDEO CONTROL ── */
+.vid-control{position:fixed;bottom:24px;right:24px;z-index:300;display:flex;align-items:center;gap:8px;background:rgba(12,16,32,.9);border:1px solid rgba(0,212,255,.25);border-radius:100px;padding:8px 16px;cursor:pointer;transition:all .2s;backdrop-filter:blur(16px)}
+.vid-control:hover{border-color:var(--electric);background:rgba(12,16,32,.98)}
+.vid-control-icon{font-size:14px}
+.vid-control-label{font-size:10px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--electric)}
+.vid-volume{display:flex;align-items:center;gap:6px;margin-left:4px;padding-left:10px;border-left:1px solid var(--border)}
+.vid-volume input[type=range]{width:60px;accent-color:var(--electric);cursor:pointer}
+
+/* ── DIVIDER & FOOTER ── */
+.divider{height:1px;background:linear-gradient(90deg,transparent,rgba(0,212,255,.15),transparent)}
+footer{background:var(--dark);border-top:1px solid var(--border);padding:clamp(28px,3vw,40px) clamp(16px,5vw,80px);display:flex;flex-wrap:wrap;gap:20px;align-items:center;justify-content:space-between}
+.footer-logo{font-family:'Syne',sans-serif;font-size:15px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;background:linear-gradient(135deg,var(--electric),var(--volt));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.footer-copy{font-size:12px;color:var(--muted)}
+.footer-socials{display:flex;gap:18px;flex-wrap:wrap}
+.footer-social{font-size:12px;color:var(--muted);text-decoration:none;letter-spacing:.05em;transition:color .2s}
+.footer-social:hover{color:var(--electric)}
+
+/* ── ANIMATIONS ── */
+.fade-up{opacity:0;transform:translateY(28px);transition:opacity .7s ease,transform .7s ease}
+.fade-up.visible{opacity:1;transform:translateY(0)}
+@media(max-width:600px){.hero-title{font-size:38px}.cta-actions{flex-direction:column;align-items:center}footer{flex-direction:column;align-items:flex-start}}
+</style>
+</head>
+<body>
+
+<!-- ═══ VIDEO BACKGROUND ═══ -->
+<div class="video-bg">
+  <!-- Primary: YouTube-style engineering video via iframe trick -->
+  <!-- We use a free-to-embed Pexels video of power lines / engineering -->
+  <video id="bgVideo" autoplay muted loop playsinline preload="auto">
+    <!-- Pexels free engineering/power line videos (no auth needed) -->
+    <source src="https://www.pexels.com/video/7578545/download/?fps=25.0&h=720&w=1280" type="video/mp4"/>
+    <source src="https://www.pexels.com/video/3843434/download/?fps=25.0&h=720&w=1280" type="video/mp4"/>
+    <!-- Fallback: electrical circuit video -->
+    <source src="https://www.pexels.com/video/3225517/download/?fps=25.0&h=720&w=1280" type="video/mp4"/>
+  </video>
+</div>
+<div class="video-bg-overlay"></div>
+
+<!-- ═══ NAV ═══ -->
+<nav>
+  <a class="nav-logo" href="index.html">Izaz Sarbudeen</a>
+  <ul class="nav-links">
+    <li><a href="index.html#services">Services</a></li>
+    <li><a href="projects.html">Projects</a></li>
+    <li><a href="primavera.html">Primavera</a></li>
+    <li><a href="resume.html">Resume</a></li>
+    <li><a href="about.html" class="active">About</a></li>
+    <li><a href="index.html#contact">Contact</a></li>
+  </ul>
+  <div class="nav-badge"><div class="dot"></div> Available</div>
+  <button class="nav-toggle" id="navToggle" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+</nav>
+<div class="mobile-nav" id="mobileNav">
+  <a href="index.html">Home</a>
+  <a href="index.html#services">Services</a>
+  <a href="projects.html">Projects</a>
+  <a href="primavera.html">Primavera P6</a>
+  <a href="resume.html">Resume / CV</a>
+  <a href="about.html">About</a>
+  <a href="index.html#contact">Contact</a>
+</div>
+
+<!-- ═══ PAGE HERO ═══ -->
+<div class="page-hero">
+  <div class="hero-grid-lines"></div>
+  <div class="hero-mesh"></div>
+  <div class="hero-inner">
+    <div class="hero-left">
+      <div class="eyebrow">About Me</div>
+      <h1 class="hero-title">
+        Izaz<br>
+        <span class="grad">Sarbudeen</span>
+      </h1>
+      <p class="hero-desc">Electrical Planning &amp; Design Engineer based in Saudi Arabia — with 4+ years of hands-on EPC experience across high-voltage transmission, underground cable systems, and project scheduling. I bridge field execution with precise digital workflows.</p>
+      <div class="hero-pills">
+        <span class="hpill hp-e">⚡ Electrical Engineer</span>
+        <span class="hpill hp-v">📐 Planning Engineer</span>
+        <span class="hpill hp-p">🛢️ Oil &amp; Gas</span>
+        <span class="hpill hp-vi">🇸🇦 Saudi Arabia</span>
+      </div>
+      <div class="hero-ctas">
+        <a href="resume.html" class="btn-primary">View Full Resume →</a>
+        <a href="index.html#contact" class="btn-outline">Hire Me</a>
+        <a href="https://linkedin.com/in/izazsarbudeen" target="_blank" class="btn-volt">LinkedIn ↗</a>
+      </div>
+    </div>
+    <div class="hero-right-visual">
+      <div class="stat-grid">
+        <div class="stat-card"><div class="stat-num">4<span style="font-size:15px">+</span></div><div class="stat-label">Years Exp.</div></div>
+        <div class="stat-card"><div class="stat-num">50<span style="font-size:15px">km</span></div><div class="stat-label">OHTL Work</div></div>
+        <div class="stat-card"><div class="stat-num">110<span style="font-size:15px">kV</span></div><div class="stat-label">Max Voltage</div></div>
+      </div>
+      <div class="profile-quote">
+        <p>"I combine <strong>field-level electrical engineering</strong> with <strong>Primavera P6 planning precision</strong> — delivering high-voltage projects on schedule, in spec, and with zero safety incidents."</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══ WHO I AM ═══ -->
+<section id="who">
+  <div class="who-layout">
+    <div class="who-text fade-up">
+      <div class="sec-eyebrow e">Background</div>
+      <h2 class="sec-title">Who I Am</h2>
+      <p>I'm <strong>Izaz Sarbudeen</strong>, an Electrical Planning &amp; Design Engineer with hands-on experience delivering major EPC projects across Saudi Arabia — for clients including <strong>Saudi Aramco</strong> and <strong>SEC (Saudi Electricity Company)</strong>.</p>
+      <p>My engineering journey began in Tamil Nadu, India, where I completed my Bachelor of Engineering in Electrical &amp; Electronics Engineering. After graduating, I moved into industrial quality control and ERP coordination before transitioning into full-scale site engineering and project planning in Saudi Arabia.</p>
+      <p>Today I specialise in <strong>Overhead Transmission Lines (OHTL)</strong>, <strong>110kV Underground Cable systems</strong>, high-voltage commissioning testing (VLF, IR, PD, RMU), and <strong>Oracle Primavera P6</strong> project scheduling — applying Earned Value Management and CPM scheduling to keep complex multi-discipline projects on time and on budget.</p>
+      <p>Outside engineering, I build web tools, automation bots, and dashboards — bridging the gap between heavy industry and modern digital workflows. I believe the best engineers understand both the field and the data behind it.</p>
+    </div>
+    <div class="fade-up">
+      <div class="value-cards">
+        <div class="value-card"><div class="vc-title"><span class="vc-icon">⚡</span> Precision Engineering</div><p class="vc-desc">Every transmission line, cable route, and schedule I deliver is engineered to exact standards — SAES, SEC, and international codes, with zero compromise on quality.</p></div>
+        <div class="value-card"><div class="vc-title"><span class="vc-icon">📊</span> Data-Driven Planning</div><p class="vc-desc">I use Primavera P6, EVM metrics, and real-time reporting to give project stakeholders full visibility — not guesswork, but measured performance data.</p></div>
+        <div class="value-card"><div class="vc-title"><span class="vc-icon">🦺</span> Safety First, Always</div><p class="vc-desc">Certified in BLS, confined space supervision, gas testing, and Saudi Aramco PTW — I lead by example on every site.</p></div>
+        <div class="value-card"><div class="vc-title"><span class="vc-icon">🤖</span> Digital Workflows</div><p class="vc-desc">I build the tools that make engineering work smarter — dashboards, bots, and automation that reduce manual effort and increase accuracy.</p></div>
+        <div class="value-card"><div class="vc-title"><span class="vc-icon">🌍</span> Global Mindset</div><p class="vc-desc">Multilingual professional (English, Tamil, Hindi, Arabic) with experience across Indian manufacturing and Saudi Arabia's oil &amp; gas sector.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ SKILLS ═══ -->
+<section id="skills">
+  <div class="fade-up">
+    <div class="sec-eyebrow v">Capabilities</div>
+    <h2 class="sec-title">Skills &amp; Expertise</h2>
+    <p class="sec-sub">A full-stack engineering skillset — from high-voltage field work to digital automation.</p>
+  </div>
+  <div class="skills-grid fade-up">
+    <div class="skill-col">
+      <div class="skill-cat">Electrical</div>
+      <div class="skill-items">
+        <span class="skill-item">OHTL Design &amp; Commissioning</span>
+        <span class="skill-item">110kV UGC Systems</span>
+        <span class="skill-item">VLF / IR / PD Testing</span>
+        <span class="skill-item">RMU &amp; HV Equipment</span>
+        <span class="skill-item">SAES / SEC Standards</span>
+      </div>
+    </div>
+    <div class="skill-col">
+      <div class="skill-cat">Planning</div>
+      <div class="skill-items">
+        <span class="skill-item">Oracle Primavera P6</span>
+        <span class="skill-item">MS Project</span>
+        <span class="skill-item">WBS / OBS / CBS</span>
+        <span class="skill-item">Earned Value Mgmt</span>
+        <span class="skill-item">Critical Path Method</span>
+      </div>
+    </div>
+    <div class="skill-col">
+      <div class="skill-cat">CAD &amp; Design</div>
+      <div class="skill-items">
+        <span class="skill-item">AutoCAD</span>
+        <span class="skill-item">Revit MEP</span>
+        <span class="skill-item">MATLAB</span>
+        <span class="skill-item">SCADA Systems</span>
+        <span class="skill-item">Technical Drafting</span>
+      </div>
+    </div>
+    <div class="skill-col">
+      <div class="skill-cat">Software</div>
+      <div class="skill-items">
+        <span class="skill-item">Python</span>
+        <span class="skill-item">FastAPI &amp; Firebase</span>
+        <span class="skill-item">HTML / CSS / JS</span>
+        <span class="skill-item">Flutter</span>
+        <span class="skill-item">IFS ERP</span>
+      </div>
+    </div>
+    <div class="skill-col">
+      <div class="skill-cat">Soft Skills</div>
+      <div class="skill-items">
+        <span class="skill-item">Site Supervision</span>
+        <span class="skill-item">Subcontractor Coord.</span>
+        <span class="skill-item">Safety Leadership</span>
+        <span class="skill-item">Technical Reporting</span>
+        <span class="skill-item">Multilingual Comms</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ CERTIFICATIONS ═══ -->
+<section id="certs">
+  <div class="fade-up">
+    <div class="sec-eyebrow p">Credentials</div>
+    <h2 class="sec-title">Certifications</h2>
+    <p class="sec-sub">Industry-recognised certifications covering engineering tools, safety, and health.</p>
+  </div>
+  <div class="cert-grid fade-up">
+    <div class="cert-card"><div class="cert-icon">📊</div><div><div class="cert-name">Oracle Primavera P6</div><div class="cert-body">Project scheduling &amp; EVM planning certification</div></div></div>
+    <div class="cert-card"><div class="cert-icon">📐</div><div><div class="cert-name">AutoCAD Essential</div><div class="cert-body">2D/3D technical drafting &amp; design</div></div></div>
+    <div class="cert-card"><div class="cert-icon">🏗️</div><div><div class="cert-name">Revit MEP Professional</div><div class="cert-body">BIM modelling for MEP engineering</div></div></div>
+    <div class="cert-card"><div class="cert-icon">🫀</div><div><div class="cert-name">BLS Provider</div><div class="cert-body">Basic Life Support — certified</div></div></div>
+    <div class="cert-card"><div class="cert-icon">⛽</div><div><div class="cert-name">Gas Tester</div><div class="cert-body">Confined space gas testing — Aramco qualified</div></div></div>
+    <div class="cert-card"><div class="cert-icon">📋</div><div><div class="cert-name">Work Permit Receiver</div><div class="cert-body">Saudi Aramco PTW system qualified</div></div></div>
+    <div class="cert-card"><div class="cert-icon">🦺</div><div><div class="cert-name">Confined Space Supervisor</div><div class="cert-body">Aramco confined space entry supervision</div></div></div>
+    <div class="cert-card"><div class="cert-icon">🚑</div><div><div class="cert-name">SHA HSFA CPR AED</div><div class="cert-body">First aid, CPR &amp; AED certified</div></div></div>
+  </div>
+</section>
+
+<!-- ═══ PERSONAL ═══ -->
+<section id="personal">
+  <div class="fade-up">
+    <div class="sec-eyebrow vi">Beyond Engineering</div>
+    <h2 class="sec-title">Outside the Office</h2>
+    <p class="sec-sub">What drives me beyond the engineering site and project schedule.</p>
+  </div>
+  <div class="personal-grid fade-up">
+    <div class="personal-card">
+      <span class="pc-icon">🛠️</span>
+      <div class="pc-title">Building Digital Tools</div>
+      <p class="pc-desc">I spend time outside work building Telegram bots, Python automation scripts, and live dashboards. I enjoy the puzzle of making software work for industrial applications.</p>
+    </div>
+    <div class="personal-card">
+      <span class="pc-icon">📚</span>
+      <div class="pc-title">Continuous Learning</div>
+      <p class="pc-desc">Always studying — currently deepening expertise in Primavera P6 Advanced, EVM methodology, and Flutter app development for engineering field tools.</p>
+    </div>
+    <div class="personal-card">
+      <span class="pc-icon">🌍</span>
+      <div class="pc-title">Cross-Cultural Working</div>
+      <p class="pc-desc">Having worked across India and Saudi Arabia, I'm comfortable in multicultural environments — communicating in English, Tamil, Hindi, and basic Arabic with site teams and clients.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ CTA ═══ -->
+<div class="divider"></div>
+<div class="cta-section">
+  <div class="cta-inner fade-up">
+    <div class="sec-eyebrow e" style="justify-content:center">Let's Connect</div>
+    <h2 class="cta-title">Open to New Opportunities</h2>
+    <p class="cta-sub">Available for electrical engineering, planning, and EPC project roles across Saudi Arabia and internationally. Let's build something great.</p>
+    <div class="cta-actions">
+      <a href="index.html#contact" class="btn-primary">Send a Message →</a>
+      <a href="resume.html" class="btn-volt">View Resume ↓</a>
+      <a href="https://linkedin.com/in/izazsarbudeen" target="_blank" class="btn-outline">LinkedIn ↗</a>
+    </div>
+  </div>
+</div>
+
+<!-- ═══ FOOTER ═══ -->
+<footer>
+  <div class="footer-logo">Izaz Sarbudeen</div>
+  <div class="footer-copy">© 2026 Izaz Sarbudeen. All rights reserved.</div>
+  <div class="footer-socials">
+    <a href="https://linkedin.com/in/izazsarbudeen" class="footer-social" target="_blank">LinkedIn</a>
+    <a href="https://github.com/izazsarbudeen" class="footer-social" target="_blank">GitHub</a>
+    <a href="https://x.com/izazkhan2983" class="footer-social" target="_blank">Twitter</a>
+    <a href="https://instagram.com/izazkhan_786_" class="footer-social" target="_blank">Instagram</a>
+    <a href="privacy-policy.html" class="footer-social">Privacy</a>
+    <a href="terms-of-use.html" class="footer-social">Terms</a>
+    <a href="legal-notice.html" class="footer-social">Legal</a>
+  </div>
+</footer>
+
+<!-- ═══ VIDEO CONTROL WIDGET ═══ -->
+<div class="vid-control" id="vidControl" title="Toggle background video">
+  <span class="vid-control-icon" id="vidIcon">▶</span>
+  <span class="vid-control-label" id="vidLabel">Video BG</span>
+  <div class="vid-volume">
+    <span style="font-size:11px;color:var(--text-dim)">🔇</span>
+    <input type="range" id="vidVol" min="0" max="1" step="0.05" value="0" title="Volume"/>
+    <span style="font-size:11px;color:var(--text-dim)">🔊</span>
+  </div>
+</div>
+
+<script>
+  // Scroll reveal
+  const obs=new IntersectionObserver((e)=>{e.forEach((en,i)=>{if(en.isIntersecting)setTimeout(()=>en.target.classList.add('visible'),70*i)})},{threshold:.06});
+  document.querySelectorAll('.fade-up').forEach(el=>obs.observe(el));
+
+  // Mobile nav
+  const toggle=document.getElementById('navToggle'),mn=document.getElementById('mobileNav');
+  toggle.addEventListener('click',()=>mn.classList.toggle('open'));
+  mn.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>mn.classList.remove('open')));
+
+  // Video control
+  const vid=document.getElementById('bgVideo');
+  const icon=document.getElementById('vidIcon');
+  const label=document.getElementById('vidLabel');
+  const volSlider=document.getElementById('vidVol');
+  let playing=true;
+  document.getElementById('vidControl').addEventListener('click',(e)=>{
+    if(e.target===volSlider)return;
+    if(playing){vid.pause();icon.textContent='⏸';label.textContent='Paused';playing=false;}
+    else{vid.play();icon.textContent='▶';label.textContent='Video BG';playing=true;}
+  });
+  volSlider.addEventListener('input',(e)=>{vid.volume=e.target.value;vid.muted=e.target.value==0;});
+  // Auto-start muted
+  vid.muted=true;vid.play().catch(()=>{});
+</script>
+</body>
+</html>
