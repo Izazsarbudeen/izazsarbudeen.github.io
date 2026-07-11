@@ -22,7 +22,7 @@
   --border:rgba(255,255,255,0.07);
 }
 html{scroll-behavior:smooth}
-body{font-family:'Plus Jakarta Sans',sans-serif;background:var(--dark);color:var(--text);overflow-x:hidden;line-height:1.65}
+body{font-family:'Plus Jakarta Sans',sans-serif;background: transparent;color:var(--text);overflow-x:hidden;line-height:1.65}
 
 /* ===== NAV ===== */
 nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;align-items:center;justify-content:space-between;padding:0 clamp(16px,5vw,80px);height:68px;background:rgba(6,8,16,.96);backdrop-filter:blur(24px);border-bottom:1px solid rgba(0,212,255,.1)}
@@ -262,9 +262,31 @@ footer{background:var(--dark);border-top:1px solid var(--border);padding:clamp(2
 
 /* ===== RESPONSIVE ===== */
 @media(max-width:600px){.page-title{font-size:36px}.cta-actions{flex-direction:column;align-items:center}footer{flex-direction:column;align-items:flex-start}}
+
+/* ========== SITE-WIDE BACKGROUND VIDEO ========== */
+.site-bg-video {
+  position: fixed;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  min-width: 100%; min-height: 100%;
+  width: auto; height: auto;
+  object-fit: cover;
+  z-index: -2;
+}
+.site-bg-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(5, 5, 15, 0.5);
+  z-index: -1;
+}
 </style>
 </head>
 <body>
+<video class="site-bg-video" autoplay muted loop playsinline preload="auto">
+  <source src="WhatsApp_Video_2026-06-02_at_11_15_52_AM.mp4" type="video/mp4">
+</video>
+<div class="site-bg-overlay"></div>
+
 
 <!-- NAV -->
 <nav>

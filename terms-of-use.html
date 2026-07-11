@@ -31,7 +31,7 @@
 html { scroll-behavior: smooth; }
 body {
   font-family: 'Plus Jakarta Sans', sans-serif;
-  background: var(--dark);
+  background: transparent;
   color: var(--text);
   overflow-x: hidden;
 }
@@ -456,9 +456,31 @@ footer {
 
 .fade-up { opacity: 0; transform: translateY(20px); transition: opacity 0.6s ease, transform 0.6s ease; }
 .fade-up.visible { opacity: 1; transform: translateY(0); }
+
+/* ========== SITE-WIDE BACKGROUND VIDEO ========== */
+.site-bg-video {
+  position: fixed;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  min-width: 100%; min-height: 100%;
+  width: auto; height: auto;
+  object-fit: cover;
+  z-index: -2;
+}
+.site-bg-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(5, 5, 15, 0.5);
+  z-index: -1;
+}
 </style>
 </head>
 <body>
+<video class="site-bg-video" autoplay muted loop playsinline preload="auto">
+  <source src="WhatsApp_Video_2026-06-02_at_11_15_52_AM.mp4" type="video/mp4">
+</video>
+<div class="site-bg-overlay"></div>
+
 
 <!-- NAV -->
 <nav>

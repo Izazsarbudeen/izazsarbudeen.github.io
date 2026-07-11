@@ -34,7 +34,7 @@
 html { scroll-behavior: smooth; }
 body {
   font-family: 'Plus Jakarta Sans', sans-serif;
-  background: var(--dark);
+  background: transparent;
   color: var(--text);
   overflow-x: hidden;
   line-height: 1.65;
@@ -224,7 +224,7 @@ nav {
 }
 
 /* ===== WBS/OBS/CBS/RBS STRUCTURES ===== */
-#structures { background: var(--dark); }
+#structures { background: rgba(6,8,16,0.55); }
 .structures-intro {
   max-width: 760px; margin-bottom: 56px;
 }
@@ -416,7 +416,7 @@ nav {
 }
 
 /* ===== DOCUMENTS SECTION ===== */
-#documents { background: var(--dark); }
+#documents { background: rgba(6,8,16,0.55); }
 
 .docs-grid {
   display: grid;
@@ -488,7 +488,7 @@ nav {
 .doc-card.ppt   .doc-action { color: var(--plasma); }
 
 /* ===== PRIMAVERA WORKFLOW ===== */
-#workflow { background: var(--dark-2); }
+#workflow { background: rgba(12,16,32,0.55); }
 .workflow-steps {
   display: grid; grid-template-columns: repeat(auto-fit, minmax(220px,1fr)); gap: 20px;
 }
@@ -595,9 +595,31 @@ footer {
   footer { flex-direction: column; align-items: flex-start; }
   .cta-actions { flex-direction: column; align-items: center; }
 }
+
+/* ========== SITE-WIDE BACKGROUND VIDEO ========== */
+.site-bg-video {
+  position: fixed;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  min-width: 100%; min-height: 100%;
+  width: auto; height: auto;
+  object-fit: cover;
+  z-index: -2;
+}
+.site-bg-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(5, 5, 15, 0.5);
+  z-index: -1;
+}
 </style>
 </head>
 <body>
+<video class="site-bg-video" autoplay muted loop playsinline preload="auto">
+  <source src="WhatsApp_Video_2026-06-02_at_11_15_52_AM.mp4" type="video/mp4">
+</video>
+<div class="site-bg-overlay"></div>
+
 
 <!-- ===== NAV ===== -->
 <nav>

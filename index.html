@@ -187,7 +187,7 @@ html { scroll-behavior: smooth; }
 
 body {
   font-family: 'Plus Jakarta Sans', sans-serif;
-  background: var(--dark);
+  background: transparent;
   color: var(--text);
   overflow-x: hidden;
 }
@@ -535,7 +535,7 @@ section { padding: clamp(72px,10vw,120px) clamp(24px,5vw,80px); }
 .accent-rose .section-eyebrow::before { background: var(--rose); }
 
 /* ========== SERVICES ========== */
-#services { background: var(--dark-2); }
+#services { background: rgba(12,16,32,0.55); }
 
 .services-grid {
   display: grid;
@@ -584,7 +584,7 @@ section { padding: clamp(72px,10vw,120px) clamp(24px,5vw,80px); }
 }
 .service-desc { font-size: 13px; line-height: 1.85; color: var(--text-dim); font-weight: 300; }
 /* ========== PROJECTS ========== */
-#projects { background: var(--dark); }
+#projects { background: rgba(6,8,16,0.55); }
 
 .projects-grid {
   display: grid;
@@ -689,7 +689,7 @@ section { padding: clamp(72px,10vw,120px) clamp(24px,5vw,80px); }
 .project-link:hover { gap: 14px; }
 
 /* ========== DOCUMENTS ========== */
-#documents { background: var(--dark-2); }
+#documents { background: rgba(12,16,32,0.55); }
 
 .docs-grid {
   display: grid;
@@ -770,7 +770,7 @@ section { padding: clamp(72px,10vw,120px) clamp(24px,5vw,80px); }
 .doc-card.video .doc-action { color: var(--violet); }
 
 /* ========== STACK ========== */
-#stack { background: var(--dark); }
+#stack { background: rgba(6,8,16,0.55); }
 
 .stack-wrap {
   display: grid;
@@ -820,7 +820,7 @@ section { padding: clamp(72px,10vw,120px) clamp(24px,5vw,80px); }
 }
 
 /* ========== EXPERIENCE ========== */
-#experience { background: var(--dark-2); }
+#experience { background: rgba(12,16,32,0.55); }
 
 .exp-layout {
   display: grid;
@@ -899,7 +899,7 @@ section { padding: clamp(72px,10vw,120px) clamp(24px,5vw,80px); }
 }
 
 /* ========== EDUCATION + CERTS ========== */
-#edu-certs { background: var(--dark); }
+#edu-certs { background: rgba(6,8,16,0.55); }
 
 .edu-certs-grid {
   display: grid;
@@ -1074,24 +1074,30 @@ footer {
 }
 .fade-up.visible { opacity: 1; transform: translateY(0); }
 
-/* ========== HERO BG VIDEO ========== */
-#bg-video {
-  position: absolute;
+/* ========== SITE-WIDE BACKGROUND VIDEO ========== */
+.site-bg-video {
+  position: fixed;
   top: 50%; left: 50%;
   transform: translate(-50%, -50%);
   min-width: 100%; min-height: 100%;
   width: auto; height: auto;
   object-fit: cover;
-  z-index: 0;
+  z-index: -2;
 }
-.video-overlay {
-  position: absolute; inset: 0;
-  background: rgba(5, 5, 15, 0.55);
-  z-index: 1;
+.site-bg-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(5, 5, 15, 0.5);
+  z-index: -1;
 }
 </style>
 </head>
 <body>
+<video class="site-bg-video" autoplay muted loop playsinline preload="auto">
+  <source src="WhatsApp_Video_2026-06-02_at_11_15_52_AM.mp4" type="video/mp4">
+</video>
+<div class="site-bg-overlay"></div>
+
 
 <!-- NAV -->
 <nav>
@@ -1109,10 +1115,6 @@ footer {
 </nav>
 <!-- HERO -->
 <section class="hero">
-  <video id="bg-video" autoplay muted loop playsinline preload="auto">
-    <source src="WhatsApp_Video_2026-06-02_at_11_15_52_AM.mp4" type="video/mp4">
-  </video>
-  <div class="video-overlay"></div>
   <div class="hero-mesh"></div>
   <div class="hero-grid-lines"></div>
 
