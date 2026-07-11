@@ -76,7 +76,7 @@
   "sameAs": [
     "https://www.linkedin.com/in/izazsarbudeen",
     "https://github.com/izazsarbudeen",
-    "https://izazsarbudeen.github.io"
+    "https://izazsarbudeen.cc.cd"
   ],
   "worksFor": {
     "@type": "Organization",
@@ -231,7 +231,50 @@ nav {
 
 @media (max-width: 700px) {
   .nav-links { display: none; }
+  .nav-badge { display: none; }
+  .nav-toggle { display: flex; }
 }
+.nav-toggle {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+  padding: 4px;
+  background: none;
+  border: none;
+}
+.nav-toggle span {
+  display: block;
+  width: 22px; height: 2px;
+  background: var(--text-dim);
+  border-radius: 2px;
+  transition: all 0.3s;
+}
+.mobile-nav {
+  display: none;
+  position: fixed;
+  top: 68px; left: 0; right: 0;
+  background: rgba(6,8,16,0.98);
+  backdrop-filter: blur(24px);
+  border-bottom: 1px solid rgba(0,212,255,0.1);
+  padding: 20px clamp(16px,5vw,40px);
+  z-index: 190;
+  flex-direction: column;
+}
+.mobile-nav.open { display: flex; }
+.mobile-nav a {
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-dim);
+  text-decoration: none;
+  padding: 14px 0;
+  border-bottom: 1px solid var(--border);
+  transition: color 0.2s;
+}
+.mobile-nav a:hover { color: var(--electric); }
+.mobile-nav a:last-child { border-bottom: none; }
 
 .nav-links a {
   font-size: 12px;
@@ -282,7 +325,10 @@ nav {
 
 @media (max-width: 900px) {
   .hero { grid-template-columns: 1fr; }
-  .hero-right { display: none; }
+  .hero-right { margin-top: 8px; }
+  .stat-grid { grid-template-columns: repeat(3, 1fr); gap: 8px; }
+  .stat-card { padding: 16px 10px; }
+  .stat-num { font-size: 26px; }
 }
 
 /* Animated mesh background */
@@ -1115,7 +1161,19 @@ footer {
     <li><a href="#contact">Contact</a></li>
   </ul>
   <div class="nav-badge"><div class="dot"></div>Available for Projects</div>
+  <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+    <span></span><span></span><span></span>
+  </button>
 </nav>
+<div class="mobile-nav" id="mobileNav">
+  <a href="primavera.html">Primavera</a>
+  <a href="#services">Services</a>
+  <a href="#projects">Projects</a>
+  <a href="#documents">Documents</a>
+  <a href="#experience">Experience</a>
+  <a href="#stack">Stack</a>
+  <a href="#contact">Contact</a>
+</div>
 <!-- HERO -->
 <section class="hero">
   <div class="hero-mesh"></div>
@@ -1231,7 +1289,7 @@ footer {
     </a>
 
     <!-- Card 2 -->
-    <a class="project-card fade-up" href="https://izazkhan8293-dev.github.io/stats.html" target="_blank">
+    <a class="project-card fade-up" href="https://izazsarbudeen.cc.cd/stats.html" target="_blank">
       <div class="project-visual">
         <div class="v-grid"></div>
         <div class="v-glow"></div>
@@ -1641,10 +1699,6 @@ footer {
 </footer>
   
 <script>
-  document.getElementById("currentYear").textContent = new Date().getFullYear();
-</script>
-  
-<script>
   const observer = new IntersectionObserver((entries) => {
     entries.forEach((entry, i) => {
       if (entry.isIntersecting) {
@@ -1653,6 +1707,12 @@ footer {
     });
   }, { threshold: 0.1 });
   document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+
+  // ── Mobile nav
+  const navToggle = document.getElementById('navToggle');
+  const mobileNav = document.getElementById('mobileNav');
+  navToggle.addEventListener('click', () => mobileNav.classList.toggle('open'));
+  mobileNav.querySelectorAll('a').forEach(a => a.addEventListener('click', () => mobileNav.classList.remove('open')));
 </script>
 </body>
 </html>

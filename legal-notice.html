@@ -33,12 +33,19 @@ body { font-family: 'Plus Jakarta Sans', sans-serif; background: transparent; co
 nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; display: flex; align-items: center; justify-content: space-between; padding: 0 clamp(24px,5vw,80px); height: 68px; background: rgba(6,8,16,.92); backdrop-filter: blur(24px); border-bottom: 1px solid rgba(0,212,255,.1); }
 .nav-logo { font-family: 'Syne', sans-serif; font-size: 17px; font-weight: 800; letter-spacing: .06em; background: linear-gradient(135deg, var(--electric), var(--volt)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; text-decoration: none; text-transform: uppercase; }
 .nav-links { display: flex; gap: clamp(20px,3vw,44px); list-style: none; }
-@media (max-width:700px) { .nav-links { display: none; } }
+@media (max-width:700px) { .nav-links { display: none; } .nav-badge { display: none; } .nav-toggle { display: flex; } }
 .nav-links a { font-size: 12px; font-weight: 600; letter-spacing: .1em; text-transform: uppercase; color: var(--text-dim); text-decoration: none; transition: color .2s; }
 .nav-links a:hover { color: var(--electric); }
 .nav-badge { display: flex; align-items: center; gap: 7px; font-size: 11px; font-weight: 600; letter-spacing: .06em; color: var(--volt); background: rgba(170,255,0,.08); border: 1px solid rgba(170,255,0,.3); padding: 5px 14px; border-radius: 100px; }
 .nav-badge .dot { width: 6px; height: 6px; border-radius: 50%; background: var(--volt); animation: blink 2s infinite; }
 @keyframes blink { 0%,100%{opacity:1;box-shadow:0 0 6px var(--volt)} 50%{opacity:.3;box-shadow:none} }
+.nav-toggle{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:4px;background:none;border:none;}
+.nav-toggle span{display:block;width:22px;height:2px;background:var(--text-dim);border-radius:2px;transition:all .3s;}
+.mobile-nav{display:none;position:fixed;top:68px;left:0;right:0;background:rgba(6,8,16,.98);backdrop-filter:blur(24px);border-bottom:1px solid rgba(0,212,255,.1);padding:20px clamp(16px,5vw,40px);z-index:190;flex-direction:column;}
+.mobile-nav.open{display:flex;}
+.mobile-nav a{font-size:14px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--text-dim);text-decoration:none;padding:14px 0;border-bottom:1px solid var(--border);transition:color .2s;}
+.mobile-nav a:hover{color:var(--electric);}
+.mobile-nav a:last-child{border-bottom:none;}
 
 /* PAGE HERO — plasma/orange accent for Legal Notice */
 .page-hero { padding: 140px clamp(24px,5vw,80px) 80px; position: relative; overflow: hidden; border-bottom: 1px solid var(--border); }
@@ -151,7 +158,15 @@ footer { background: var(--dark-2); border-top: 1px solid var(--border); padding
     <li><a href="index.html#contact">Contact</a></li>
   </ul>
   <div class="nav-badge"><span class="dot"></span> Available</div>
+  <button class="nav-toggle" id="navToggle" aria-label="Toggle menu"><span></span><span></span><span></span></button>
 </nav>
+<div class="mobile-nav" id="mobileNav">
+  <a href="index.html">Home</a>
+  <a href="index.html#services">Services</a>
+  <a href="index.html#projects">Projects</a>
+  <a href="index.html#experience">Experience</a>
+  <a href="index.html#contact">Contact</a>
+</div>
 
 <div class="page-hero">
   <div class="page-hero-mesh"></div>
@@ -361,6 +376,11 @@ footer { background: var(--dark-2); border-top: 1px solid var(--border); padding
     });
   }, { threshold: 0.08 });
   document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+
+  const navToggle = document.getElementById('navToggle');
+  const mobileNav = document.getElementById('mobileNav');
+  navToggle.addEventListener('click', () => mobileNav.classList.toggle('open'));
+  mobileNav.querySelectorAll('a').forEach(a => a.addEventListener('click', () => mobileNav.classList.remove('open')));
 </script>
 </body>
 </html>
