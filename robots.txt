@@ -1,0 +1,11 @@
+# robots.txt for izazsarbudeen.cc.cd
+# Engr. Izaz Sarbudeen — HV/MV Electrical Design Engineer
+
+User-agent: *
+Allow: /
+
+# Point all crawlers to the sitemap
+Sitemap: https://izazsarbudeen.cc.cd/sitemap.xml
+
+# Block crawlers from any admin/private paths (add if needed)
+# Disallow: /admin/
