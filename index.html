@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-     
 <!-- ── Primary Meta Tags ──────────────────────────────────────── -->
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -47,12 +46,9 @@
 <!-- ── Sitemap reference ──────────────────────────────────────── -->
 <link rel="sitemap" type="application/xml" title="Sitemap" href="/sitemap.xml" />
 
-<!-- ── Favicon ────────────────────────────────────────────────── -->
-<link rel="icon" href="/favicon.ico" sizes="any" />
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
-<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
-<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-<link rel="icon" type="image/png" sizes="192x192" href="/android-chrome-192x192.png" />
+<!-- ── Favicon (update path to your actual favicon) ─────────── -->
+<link rel="icon"             type="image/png" href="/favicon.png" />
+<link rel="apple-touch-icon" type="image/png" href="/favicon.png" />
 
 <!-- ── Schema.org Person (JSON-LD) ──────────────────────────── -->
 <!-- This is what makes Google show a Knowledge Panel for
@@ -187,6 +183,14 @@
   --border: rgba(255,255,255,0.07);
 }
 
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  background: transparent;
+  color: var(--text);
+  overflow-x: hidden;
+}
 
 /* ========== NAV ========== */
 nav {
