@@ -583,31 +583,6 @@ section { padding: clamp(72px,10vw,120px) clamp(24px,5vw,80px); }
   margin-bottom: 14px; line-height: 1.2;
 }
 .service-desc { font-size: 13px; line-height: 1.85; color: var(--text-dim); font-weight: 300; }
-<section id="visitor-stats">
-    <div class="fake-stats">
-
-        <div class="stat-box">
-            <h3 id="visitors">24,583</h3>
-            <p>Total Visitors</p>
-        </div>
-
-        <div class="stat-box">
-            <h3 id="online">42</h3>
-            <p>Online Now</p>
-        </div>
-
-        <div class="stat-box">
-            <h3 id="projects">137</h3>
-            <p>Projects Viewed</p>
-        </div>
-
-        <div class="stat-box">
-            <h3 id="countries">96</h3>
-            <p>Countries Reached</p>
-        </div>
-
-    </div>
-</section>
 /* ========== PROJECTS ========== */
 #projects { background: var(--dark); }
 
@@ -1098,6 +1073,22 @@ footer {
   transition: opacity 0.7s ease, transform 0.7s ease;
 }
 .fade-up.visible { opacity: 1; transform: translateY(0); }
+
+/* ========== HERO BG VIDEO ========== */
+#bg-video {
+  position: absolute;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  min-width: 100%; min-height: 100%;
+  width: auto; height: auto;
+  object-fit: cover;
+  z-index: 0;
+}
+.video-overlay {
+  position: absolute; inset: 0;
+  background: rgba(5, 5, 15, 0.55);
+  z-index: 1;
+}
 </style>
 </head>
 <body>
@@ -1116,41 +1107,12 @@ footer {
   </ul>
   <div class="nav-badge"><div class="dot"></div>Available for Projects</div>
 </nav>
-<!-- VIDEO BACKGROUND — paste in your index.html -->
-
-<!-- 1. Add this style in your <head> -->
-<style>
-  .hero-section { position: relative; overflow: hidden; }
-
-  #bg-video {
-    position: absolute;
-    top: 50%; left: 50%;
-    transform: translate(-50%, -50%);
-    min-width: 100%; min-height: 100%;
-    width: auto; height: auto;
-    object-fit: cover;
-    z-index: 0;
-  }
-
-  .video-overlay {
-    position: absolute; inset: 0;
-    background: rgba(5, 5, 15, 0.55);
-    z-index: 1;
-  }
-
-  .hero-content { position: relative; z-index: 2; }
-</style>
-
-<!-- 2. Add inside your hero section -->
-<video id="bg-video"
-  autoplay muted loop playsinline
-  preload="auto">
-  <source src="WhatsApp_Video_2026-06-02_at_11_15_52_AM.mp4"
-          type="video/mp4">
-</video>
-<div class="video-overlay"></div>
 <!-- HERO -->
 <section class="hero">
+  <video id="bg-video" autoplay muted loop playsinline preload="auto">
+    <source src="WhatsApp_Video_2026-06-02_at_11_15_52_AM.mp4" type="video/mp4">
+  </video>
+  <div class="video-overlay"></div>
   <div class="hero-mesh"></div>
   <div class="hero-grid-lines"></div>
 
@@ -1245,7 +1207,7 @@ footer {
   <div class="projects-grid">
 
     <!-- Featured -->
-    <a class="project-card featured fade-up" href="https://izazsarbudeen.github.io/projects.html" target="_blank">
+    <a class="project-card featured fade-up" href="projects.html" target="_blank">
       <div class="project-visual" style="min-height:260px">
         <div class="v-grid"></div>
         <div class="v-glow"></div>
@@ -1314,7 +1276,7 @@ footer {
   </div>
   <div class="docs-grid fade-up">
 
-    <a class="doc-card pdf" href="https://izazsarbudeen.github.io/documents.html" target="_blank">
+    <a class="doc-card pdf" href="documents.html" target="_blank">
       <div class="doc-icon-wrap">📄</div>
       <div class="doc-info">
         <div class="doc-type">PDF Document</div>
@@ -1324,7 +1286,7 @@ footer {
       </div>
     </a>
 
-    <a class="doc-card ppt" href="https://izazsarbudeen.github.io/documents.html" target="_blank">
+    <a class="doc-card ppt" href="documents.html" target="_blank">
       <div class="doc-icon-wrap">📊</div>
       <div class="doc-info">
         <div class="doc-type">PowerPoint</div>
@@ -1344,7 +1306,7 @@ footer {
       </div>
     </a>
 
-    <a class="doc-card video" href="https://izazsarbudeen.github.io/documents.html" target="_blank">
+    <a class="doc-card video" href="documents.html" target="_blank">
       <div class="doc-icon-wrap">🎬</div>
       <div class="doc-info">
         <div class="doc-type">Video</div>
@@ -1630,8 +1592,8 @@ footer {
     </div>
 
     <div style="display:flex;gap:14px;flex-wrap:wrap">
-      <a href="https://izazsarbudeen.github.io/contact.html" class="btn-primary" target="_blank">Send a Message →</a>
-      <a href="https://izazsarbudeen.github.io/resume.html" class="btn-outline" target="_blank">Download CV</a>
+      <a href="contact.html" class="btn-primary" target="_blank">Send a Message →</a>
+      <a href="resume.html" class="btn-outline" target="_blank">Download CV</a>
     </div>
   </div>
 
@@ -1668,8 +1630,8 @@ footer {
     <a href="https://github.com/izazsarbudeen" class="footer-social" target="_blank">GitHub</a>
     <a href="https://x.com/izazkhan2983" class="footer-social" target="_blank">Twitter</a>
     <a href="https://instagram.com/izazkhan_786_" class="footer-social" target="_blank">Instagram</a>
-    <a href="https://izazsarbudeen.github.io/privacy-policy.html" class="footer-social" target="_blank">Privacy</a>
-    <a href="https://izazsarbudeen.github.io/terms-of-use.html" class="footer-social" target="_blank">Terms</a>
+    <a href="privacy-policy.html" class="footer-social" target="_blank">Privacy</a>
+    <a href="terms-of-use.html" class="footer-social" target="_blank">Terms</a>
   </div>
 </footer>
   

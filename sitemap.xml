@@ -12,52 +12,52 @@
     <priority>1.0</priority>
   </url>
 
+  <!-- Primavera P6 Page -->
+  <url>
+    <loc>https://izazsarbudeen.cc.cd/primavera.html</loc>
+    <lastmod>2026-07-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
   <!-- Projects Page -->
   <url>
-    <loc>https://izazsarbudeen.cc.cd/projects</loc>
+    <loc>https://izazsarbudeen.cc.cd/projects.html</loc>
     <lastmod>2026-07-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
 
-  <!-- Experience Page -->
+  <!-- Documents Page -->
   <url>
-    <loc>https://izazsarbudeen.cc.cd/experience</loc>
+    <loc>https://izazsarbudeen.cc.cd/documents.html</loc>
     <lastmod>2026-07-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
-  <!-- Documents / Resume Page -->
+  <!-- Resume Page -->
   <url>
-    <loc>https://izazsarbudeen.cc.cd/documents</loc>
+    <loc>https://izazsarbudeen.cc.cd/resume.html</loc>
     <lastmod>2026-07-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
-  <!-- Stack / Tech Page -->
+  <!-- About Page -->
   <url>
-    <loc>https://izazsarbudeen.cc.cd/stack</loc>
+    <loc>https://izazsarbudeen.cc.cd/about.html</loc>
     <lastmod>2026-07-11</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.6</priority>
   </url>
 
   <!-- Contact Page -->
   <url>
-    <loc>https://izazsarbudeen.cc.cd/contact</loc>
+    <loc>https://izazsarbudeen.cc.cd/contact.html</loc>
     <lastmod>2026-07-11</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.7</priority>
-  </url>
-
-  <!-- Also index the github.io URL (canonical) -->
-  <url>
-    <loc>https://izazsarbudeen.github.io/</loc>
-    <lastmod>2026-07-11</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
   </url>
 
 </urlset>
