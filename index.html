@@ -730,6 +730,37 @@ section { padding: clamp(72px,10vw,120px) clamp(24px,5vw,80px); }
   font-size: 13px; line-height: 1.85; color: var(--text-dim);
   font-weight: 300; margin-bottom: 24px;
 }
+.project-cs {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 24px;
+  padding-left: 16px;
+  border-left: 2px solid var(--border);
+}
+.project-cs li {
+  font-size: 13px;
+  line-height: 1.75;
+  font-weight: 300;
+  color: var(--text-dim);
+  text-decoration: none;
+}
+.project-cs li strong {
+  display: block;
+  font-family: 'Syne', sans-serif;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--electric);
+  text-decoration: none;
+  margin-bottom: 3px;
+}
+.project-cs li span {
+  color: var(--text-dim);
+  text-decoration: none;
+}
 .project-link {
   display: inline-flex; align-items: center; gap: 7px;
   font-size: 12px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase;
@@ -1128,6 +1159,72 @@ footer {
 }
 .fade-up.visible { opacity: 1; transform: translateY(0); }
 
+/* ========== TESTIMONIALS ========== */
+#testimonials { background: var(--dark); }
+
+.testimonials-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+.testimonial-card {
+  background: var(--dark-3);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 28px 26px;
+  position: relative;
+  overflow: hidden;
+  transition: border-color 0.3s, transform 0.3s;
+}
+.testimonial-card:hover { transform: translateY(-3px); }
+.testimonial-card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0; height: 2px;
+}
+.testimonial-card:nth-child(1)::before { background: var(--electric); }
+.testimonial-card:nth-child(2)::before { background: var(--volt); }
+.testimonial-card:nth-child(3)::before { background: var(--plasma); }
+.testimonial-card:nth-child(1):hover { border-color: rgba(0,212,255,0.3); }
+.testimonial-card:nth-child(2):hover { border-color: rgba(170,255,0,0.3); }
+.testimonial-card:nth-child(3):hover { border-color: rgba(255,107,53,0.3); }
+
+.testimonial-quote-icon {
+  font-family: 'Syne', sans-serif;
+  font-size: 40px;
+  font-weight: 800;
+  line-height: 1;
+  color: var(--electric-dim);
+  opacity: 0.5;
+  margin-bottom: 8px;
+  display: block;
+}
+.testimonial-text {
+  font-size: 14px;
+  line-height: 1.8;
+  color: var(--text-dim);
+  font-weight: 300;
+  margin-bottom: 22px;
+}
+.testimonial-author {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.testimonial-avatar {
+  width: 38px; height: 38px;
+  border-radius: 50%;
+  background: rgba(0,212,255,0.1);
+  color: var(--electric);
+  display: flex; align-items: center; justify-content: center;
+  font-family: 'Syne', sans-serif;
+  font-size: 13px; font-weight: 700;
+  flex-shrink: 0;
+}
+.testimonial-name { font-size: 13px; font-weight: 700; color: var(--text); }
+.testimonial-role { font-size: 11px; color: var(--text-dim); }
+
 /* ========== SITE-WIDE BACKGROUND VIDEO ========== */
 .site-bg-video {
   position: fixed;
@@ -1408,7 +1505,7 @@ footer {
     <div class="hero-ctas">
       <a href="projects.html" class="btn-primary">View My Work →</a>
       <a href="documents.html" class="btn-volt">Documents ↓</a>
-      <a href="contact.html" class="btn-outline">Get in Touch</a>
+      <a href="contact.html" class="btn-outline">Check My Availability →</a>
     </div>
   </div>
 
@@ -1579,6 +1676,58 @@ footer {
         <span class="project-link">View on GitHub →</span>
       </div>
     </a>
+
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- TESTIMONIALS -->
+<!-- Replace name/role/quote placeholders with real feedback from a supervisor
+     or coordinator at Holding Alojaimi, Yousif Ali Al-Jassim, or Technical
+     Time Contracting — even a short WhatsApp message works as source material. -->
+<section id="testimonials" class="accent-electric">
+  <div class="section-header fade-up">
+    <div class="section-eyebrow">What People Say</div>
+    <h2 class="section-title">Trusted on the Ground</h2>
+  </div>
+  <div class="testimonials-grid fade-up">
+
+    <div class="testimonial-card">
+      <span class="testimonial-quote-icon">"</span>
+      <p class="testimonial-text">Before Izaz took over scheduling on our UGC package, we were behind on three spans. He restructured the look-ahead plan and we hit every SEC compliance checkpoint on the revised timeline.</p>
+      <div class="testimonial-author">
+        <div class="testimonial-avatar">RS</div>
+        <div>
+          <div class="testimonial-name">Name Here</div>
+          <div class="testimonial-role">Project Manager, Holding Alojaimi</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="testimonial-card">
+      <span class="testimonial-quote-icon">"</span>
+      <p class="testimonial-text">Izaz managed sagging, crimping, and earth-rod testing across a 50km route with zero safety incidents and zero schedule slippage. That's rare on OHTL work at that scale.</p>
+      <div class="testimonial-author">
+        <div class="testimonial-avatar">AH</div>
+        <div>
+          <div class="testimonial-name">Name Here</div>
+          <div class="testimonial-role">Site Supervisor, Yousif Ali Al-Jassim</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="testimonial-card">
+      <span class="testimonial-quote-icon">"</span>
+      <p class="testimonial-text">What stands out with Izaz is the documentation. DTS/DCS packages came back clean and client-ready the first time, which saved us weeks of back-and-forth.</p>
+      <div class="testimonial-author">
+        <div class="testimonial-avatar">MK</div>
+        <div>
+          <div class="testimonial-name">Name Here</div>
+          <div class="testimonial-role">QC Coordinator</div>
+        </div>
+      </div>
+    </div>
 
   </div>
 </section>
@@ -1909,7 +2058,7 @@ footer {
     </div>
 
     <div style="display:flex;gap:14px;flex-wrap:wrap">
-      <a href="contact.html" class="btn-primary" target="_blank">Send a Message →</a>
+      <a href="contact.html" class="btn-primary" target="_blank">Discuss a Project With Me →</a>
       <a href="resume.html" class="btn-outline" target="_blank">Download CV</a>
     </div>
   </div>
@@ -1933,7 +2082,7 @@ footer {
       <textarea placeholder="Tell me about your project…"></textarea>
     </div>
     <button onclick="alert('Form submitted! Connect to a backend to enable sending.')" class="btn-primary" style="width:100%;justify-content:center;cursor:pointer;border:none;">
-      Send Message →
+      Send Project Details →
     </button>
   </div>
 </section>
